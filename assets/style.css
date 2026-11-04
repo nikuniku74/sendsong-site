@@ -149,10 +149,21 @@ a.plain, .store, .brand, .skip, .toc a, .guide-toc a { background: none; padding
   gap: 40px 48px; align-items: center;
 }
 .hero-copy { min-width: 0; max-width: 34em; }
-.hero-mark {
-  display: block; width: 56px; height: 56px; margin: 0 0 22px;
-  border-radius: 22%; object-fit: contain;
+.hero-brand {
+  display: flex; align-items: center; gap: clamp(14px, 1.8vw, 22px);
+  margin: 0 0 28px;
 }
+.hero-mark {
+  display: block; flex: none; width: clamp(64px, 7vw, 88px); height: auto; aspect-ratio: 1;
+  border-radius: 22%; object-fit: contain;
+  box-shadow: 0 12px 40px -12px rgba(228, 1, 109, .55);
+}
+.hero-name {
+  font-family: "Roboto Condensed", system-ui, sans-serif;
+  font-size: clamp(44px, 6.4vw, 84px); font-weight: 800; line-height: 1;
+  letter-spacing: -.01em; color: #F4F4F7;
+}
+.hero-name b { font-weight: 800; color: var(--accent-brand); }
 .hero-stage {
   position: relative; min-height: 380px; width: 100%;
   border-radius: 20px;
@@ -413,7 +424,6 @@ dl.facts dd { margin: 0; }
   .nav a { font-size: 13px; }
   .site-header.on-hero .wrap { flex-direction: column; align-items: stretch; gap: 10px; }
   .on-hero .nav { width: 100%; justify-content: space-between; }
-  .hero-mark { width: 52px; height: 52px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
