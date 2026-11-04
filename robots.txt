@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nikuniku74.github.io/sendsong-site/sitemap.xml
