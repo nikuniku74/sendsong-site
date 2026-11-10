@@ -94,6 +94,8 @@
           <h2><span data-l="it" lang="it">Comunicazione tra i tuoi device</span><span data-l="en" lang="en">Communication between your devices</span></h2>
           <p data-l="it" lang="it">Quando invii un brano dal Master ai Monitor, i dati del brano (titolo, autore, colore, riferimenti PDF concordati) viaggiano <strong>direttamente</strong> tra i tuoi dispositivi via rete locale (Bonjour) o Bluetooth LE. RitmoDigitale non intercetta né conserva questi scambi su server propri.</p>
           <p data-l="en" lang="en">When you send a song from the Master to Monitors, song data (title, artist, colour, agreed PDF references) travels <strong>directly</strong> between your devices over the local network (Bonjour) or Bluetooth LE. RitmoDigitale does not intercept or store these exchanges on its own servers.</p>
+          <p data-l="it" lang="it">I messaggi <strong>Bluetooth MIDI</strong> (Control Change verso effettori collegati) restano sul percorso locale tra il tuo Master e l’adattatore o il device MIDI: non li riceviamo né li archiviamo.</p>
+          <p data-l="en" lang="en"><strong>Bluetooth MIDI</strong> messages (Control Change to connected gear) stay on the local path between your Master and the adapter or MIDI device: we do not receive or store them.</p>
         </section>
         <section id="permessi" class="numbered">
           <h2><span data-l="it" lang="it">Permessi del dispositivo</span><span data-l="en" lang="en">Device permissions</span></h2>
@@ -102,8 +104,8 @@
           <ul>
             <li data-l="it" lang="it"><strong>Rete locale</strong> (iOS): scoprire e parlare con Master/Monitor sulla stessa rete.</li>
             <li data-l="en" lang="en"><strong>Local Network</strong> (iOS): discover and talk to Master/Monitor on the same network.</li>
-            <li data-l="it" lang="it"><strong>Bluetooth</strong>: connessione BLE tra Master e Monitor senza Wi‑Fi comune.</li>
-            <li data-l="en" lang="en"><strong>Bluetooth</strong>: BLE link between Master and Monitor without shared Wi‑Fi.</li>
+            <li data-l="it" lang="it"><strong>Bluetooth</strong>: connessione BLE tra Master e Monitor senza Wi‑Fi comune; con <strong>Effetti MIDI</strong> attivi, anche collegamento BLE MIDI locale verso adattatori e processori (CC) — senza server, senza account.</li>
+            <li data-l="en" lang="en"><strong>Bluetooth</strong>: BLE link between Master and Monitor without shared Wi‑Fi; with <strong>MIDI effects</strong> enabled, also a local BLE MIDI link to adapters and processors (CC) — no servers, no account.</li>
             <li data-l="it" lang="it"><strong>Posizione</strong> (solo alcuni Android più vecchi, per la scansione BLE): non usiamo la posizione per tracciarti; serve al sistema per trovare device Bluetooth nelle vicinanze.</li>
             <li data-l="en" lang="en"><strong>Location</strong> (some older Android only, for BLE scanning): we do not use location to track you; the OS needs it to find nearby Bluetooth devices.</li>
             <li data-l="it" lang="it"><strong>Foto / file</strong>: solo quando scegli tu un PDF o un backup da importare.</li>
