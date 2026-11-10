@@ -15,8 +15,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Condensed:wght@400;700;800&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=9">
-  <script src="assets/site.js"></script>
+  <link rel="stylesheet" href="assets/style.css?v=10">
+  <script src="assets/site.js?v=10"></script>
 </head>
 <body>
   <a class="skip" href="#main"><span data-l="it" lang="it">Salta al contenuto</span><span data-l="en" lang="en">Skip to content</span></a>
@@ -37,6 +37,12 @@
     <div class="wrap">
       <article class="doc">
         <h1><span data-l="it" lang="it">Supporto</span><span data-l="en" lang="en">Support</span></h1>
+        <div class="support-search">
+          <label for="support-q"><span data-l="it" lang="it">Cerca nel supporto</span><span data-l="en" lang="en">Search support</span></label>
+          <input id="support-q" type="search" enterkeyhint="search" autocomplete="off" placeholder="Codice, PDF, piano, MIDI…" data-en-placeholder="Code, PDF, plan, MIDI…">
+          <p class="hint" data-l="it" lang="it">Le risposte si filtrano mentre scrivi. Apri la domanda per il percorso completo.</p>
+          <p class="hint" data-l="en" lang="en">Answers filter as you type. Open a question for the full path.</p>
+        </div>
         <p class="lead" data-l="it" lang="it">Una domanda sul palco, un Monitor che non si collega, un acquisto da ripristinare? Scrivici. Qui sotto le risposte più frequenti.</p>
         <p class="lead" data-l="en" lang="en">A question about a gig, a Monitor that will not connect, a purchase to restore? Write to us. Below are the most common answers.</p>
         <div class="contact">
@@ -50,97 +56,412 @@
         <h2><span data-l="it" lang="it">Segnalare un problema</span><span data-l="en" lang="en">Report a problem</span></h2>
         <p data-l="it" lang="it">Per aiutarti più in fretta, indica: modello del dispositivo, versione del sistema (iOS/Android), versione di SendSong (in fondo a Impostazioni › Account), ruolo (Master o Monitor), trasporto usato (Wi‑Fi o Bluetooth) e cosa succede passo passo.</p>
         <p data-l="en" lang="en">To help you faster, include: device model, OS version (iOS/Android), SendSong version (at the bottom of Settings › Account), role (Master or Monitor), transport used (Wi‑Fi or Bluetooth) and what happens step by step.</p>
-        <h2 class="faq-title"><span data-l="it" lang="it">Domande frequenti</span><span data-l="en" lang="en">Frequently asked questions</span></h2>
-        <div class="faq">
+        <nav class="support-jump" aria-label="Sezioni">
+          <a href="#aiuto-collegamento"><span data-l="it" lang="it">Collegamento</span><span data-l="en" lang="en">Connection</span></a>
+          <a href="#aiuto-brani"><span data-l="it" lang="it">Brani e repertori</span><span data-l="en" lang="en">Songs and repertoires</span></a>
+          <a href="#aiuto-spartiti"><span data-l="it" lang="it">Spartiti</span><span data-l="en" lang="en">Charts</span></a>
+          <a href="#aiuto-midi"><span data-l="it" lang="it">Effetti MIDI</span><span data-l="en" lang="en">MIDI effects</span></a>
+          <a href="#aiuto-piani"><span data-l="it" lang="it">Piani</span><span data-l="en" lang="en">Plans</span></a>
+          <a href="#aiuto-backup"><span data-l="it" lang="it">Backup</span><span data-l="en" lang="en">Backup</span></a>
+        </nav>
+        <h2 class="faq-title"><span data-l="it" lang="it">Aiuto per sezione</span><span data-l="en" lang="en">Help by section</span></h2>
+        <p data-l="it" lang="it">Ogni sezione segue i menu dell’app. I passaggi lunghi sono anche nella <a href="guide.html">guida</a>.</p>
+        <p data-l="en" lang="en">Each section follows the app menus. The longer walkthroughs are also in the <a href="guide.html">guide</a>.</p>
+
+        <section class="faq-group" id="aiuto-collegamento">
+          <h2><span data-l="it" lang="it">Collegamento</span><span data-l="en" lang="en">Connection</span></h2>
+          <div class="faq">
           <details>
             <summary><span data-l="it" lang="it">Serve internet per suonare dal vivo?</span><span data-l="en" lang="en">Do I need internet to play live?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">No. Master e Monitor comunicano sulla rete locale Wi‑Fi o via Bluetooth. Internet serve solo per acquisti e aggiornamenti dallo store.</p><p data-l="en" lang="en">No. Master and Monitors talk over local Wi‑Fi or Bluetooth. Internet is only needed for store purchases and updates.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">No. Master e Monitor si parlano in locale, via Wi‑Fi o Bluetooth, anche senza rete dati. Internet serve per scaricare l’app, per gli aggiornamenti e per gli acquisti nello store.</p>
+              <p data-l="it" lang="it">Una rete ospite può avere internet e comunque impedire il collegamento: se i telefoni non si vedono tra loro, in Impostazioni › Connessione passa a Bluetooth su tutti i dispositivi.</p>
+              <p data-l="en" lang="en">No. Master and Monitors talk locally, over Wi‑Fi or Bluetooth, even with no mobile data. Internet is for downloading the app, for updates and for store purchases.</p>
+              <p data-l="en" lang="en">A guest network can have internet and still block the link: if the phones cannot see each other, switch every device to Bluetooth under Settings › Connection.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Wi‑Fi o Bluetooth: quale scelgo?</span><span data-l="en" lang="en">Wi‑Fi or Bluetooth: which should I pick?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Su entrambi i device apri Impostazioni › Connessione e scegli lo <strong>stesso</strong> trasporto. Bluetooth è comodo senza stessa rete Wi‑Fi; Wi‑Fi locale richiede la stessa rete (attenzione alle reti ospiti che isolano i device).</p><p data-l="en" lang="en">On both devices open Settings › Connection and pick the <strong>same</strong> transport. Bluetooth works without the same Wi‑Fi network; local Wi‑Fi needs the same network (watch out for guest networks that isolate devices).</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">Apri Impostazioni › Connessione su ogni dispositivo e scegli lo stesso trasporto. Se uno è su Bluetooth e l’altro su Wi‑Fi, il Monitor resta su «Ricerca del Master…».</p>
+              <p data-l="en" lang="en">Open Settings › Connection on every device and pick the same transport. If one is on Bluetooth and the other on Wi‑Fi, the Monitor stays on «Looking for the Master…».</p>
+              <ul>
+                <li data-l="it" lang="it"><strong>Bluetooth</strong> quando non condividete una Wi‑Fi. Tieni i dispositivi vicini e il Bluetooth acceso.</li>
+                <li data-l="en" lang="en"><strong>Bluetooth</strong> when you do not share a Wi‑Fi network. Keep the devices close and Bluetooth on.</li>
+                <li data-l="it" lang="it"><strong>Wi‑Fi locale</strong> quando siete sulla stessa rete. Le reti ospiti di locali e hotel spesso isolano i telefoni: in quel caso usa Bluetooth.</li>
+                <li data-l="en" lang="en"><strong>Local Wi‑Fi</strong> when you are on the same network. Guest networks in venues and hotels often isolate phones: use Bluetooth in that case.</li>
+              </ul>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Dove trovo il codice del Master?</span><span data-l="en" lang="en">Where is the Master code?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Sul Master: Impostazioni › Connessione — codice a 6 cifre. Ogni Monitor lo inserisce lì e tocca Salva finché compare «Abbinato».</p><p data-l="en" lang="en">On the Master: Settings › Connection — 6-digit code. Each Monitor enters it there and taps Save until you see «Paired».</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">Sul Master apri Impostazioni › Connessione. Il codice è di 6 cifre. Senza quel codice il Monitor non si collega, e ogni Monitor riceve solo dal Master del codice che ha inserito.</p>
+              <p data-l="it" lang="it">Sul Monitor: Impostazioni › Connessione, scrivi le 6 cifre e tocca Salva. Quando il codice è accettato compare «Abbinato». Se le cifre non sono sei, l’app chiede un codice di 6 cifre.</p>
+              <p data-l="en" lang="en">On the Master open Settings › Connection. The code has 6 digits. Without that code the Monitor will not connect, and each Monitor only receives from the Master of the code it entered.</p>
+              <p data-l="en" lang="en">On the Monitor: Settings › Connection, type the 6 digits and tap Save. When the code is accepted you see «Paired». If the digits are not six, the app asks for a 6-digit code.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Il Master ha generato un nuovo codice</span><span data-l="en" lang="en">The Master generated a new code</span></summary>
-            <div class="ans"><p data-l="it" lang="it">I Monitor collegati vengono scollegati. Su ogni Monitor inserisci il nuovo codice in Impostazioni › Connessione. Se resti su «Ricerca del Master…», confronta il codice mostrato con quello attuale del Master.</p><p data-l="en" lang="en">Connected Monitors are disconnected. On each Monitor enter the new code under Settings › Connection. If you stay on «Looking for the Master…», compare the code shown with the Master’s current code.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">In Impostazioni › Connessione del Master, «Genera nuovo codice» scollega i Monitor già collegati e li avvisa. Il codice precedente non funziona più.</p>
+              <p data-l="it" lang="it">Su ogni Monitor apri Impostazioni › Connessione e inserisci il codice nuovo, poi Salva, finché compare «Abbinato». Se resti su «Ricerca del Master…», confronta le cifre a schermo con quelle attuali del Master: spesso è rimasto il codice di prima.</p>
+              <p data-l="en" lang="en">On the Master, under Settings › Connection, «Generate new code» disconnects Monitors that were already linked and tells them. The previous code no longer works.</p>
+              <p data-l="en" lang="en">On each Monitor open Settings › Connection and enter the new code, then Save, until you see «Paired». If you stay on «Looking for the Master…», compare the digits on screen with the Master’s current ones: the old code is often still there.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Compare «Codice errato»</span><span data-l="en" lang="en">I see «Wrong code»</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Ricontrolla le 6 cifre sul Master. Tocca Rimuovi sul Monitor e reinserisci il codice. Verifica di non aver scelto un Master diverso.</p><p data-l="en" lang="en">Double-check the 6 digits on the Master. Tap Remove on the Monitor and enter the code again. Make sure you are not pairing to a different Master.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">«Codice errato» vuol dire che quelle cifre non corrispondono a nessun Master vicino. L’app lo dice anche nel testo sotto: controlla il codice nelle Impostazioni del Master.</p>
+              <p data-l="it" lang="it">Sul Monitor tocca Rimuovi. Il Monitor non si collega più finché non inserisci un codice. Riscrivi le 6 cifre di Impostazioni › Connessione del Master e tocca Salva. Se hai più Master accesi, controlla di non aver copiato il codice di un altro.</p>
+              <p data-l="en" lang="en">«Wrong code» means those digits do not match any nearby Master. The line under it says the same: check the code in the Master’s settings.</p>
+              <p data-l="en" lang="en">On the Monitor tap Remove. The Monitor will not connect again until you enter a code. Type the 6 digits from the Master’s Settings › Connection and tap Save. If several Masters are on, make sure you did not copy another one’s code.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">«Il Master ha raggiunto il limite di Monitor»</span><span data-l="en" lang="en">«The Master reached its monitor limit»</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Con il piano gratis il Master accetta un solo Monitor collegato. Per più leggii serve Pro o Full — vedi Impostazioni › Piano. Il ruolo Monitor (titoli e scaletta) resta gratis per tutta la band.</p><p data-l="en" lang="en">On the free plan the Master accepts one linked Monitor only. For more stands you need Pro or Full — see Settings › Plan. The Monitor role (titles and setlist) stays free for the whole band.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">Quella schermata compare quando il Master non può accettare un altro Monitor. Con il piano gratis il limite è un Monitor collegato. Per più leggii serve Pro o Full: sul Master apri Impostazioni › Piano.</p>
+              <p data-l="it" lang="it">Il ruolo Monitor resta gratis per titoli, brano attuale, prossimo e scaletta. Il limite riguarda quanti Monitor possono essere collegati insieme, non l’uso del leggìo.</p>
+              <p data-l="en" lang="en">That screen appears when the Master cannot accept another Monitor. On the free plan the limit is one linked Monitor. For more stands you need Pro or Full: on the Master open Settings › Plan.</p>
+              <p data-l="en" lang="en">The Monitor role stays free for titles, the current song, the next one and the setlist. The limit is how many Monitors can be linked at once, not whether you can use a stand.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Il Monitor resta su «Ricerca del Master…»</span><span data-l="en" lang="en">The Monitor stays on «Looking for the Master…»</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Controlla: stesso trasporto su entrambi, Bluetooth acceso, permessi Rete locale / Bluetooth (iOS) o vicinanze (Android), stessa Wi‑Fi se usi Wi‑Fi locale, app in primo piano, codice corretto. Evita reti ospiti che bloccano i device tra loro.</p><p data-l="en" lang="en">Check: same transport on both, Bluetooth on, Local Network / Bluetooth permissions (iOS) or nearby devices (Android), same Wi‑Fi if using local Wi‑Fi, app in foreground, correct code. Avoid guest networks that block devices from each other.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">«Ricerca del Master…» vuol dire che il Monitor è acceso ma non trova quel Master. Controlla nell’ordine:</p>
+              <p data-l="en" lang="en">«Looking for the Master…» means the Monitor is on but cannot find that Master. Check in this order:</p>
+              <ul>
+                <li data-l="it" lang="it">Lo stesso trasporto in Impostazioni › Connessione su entrambi i dispositivi.</li>
+                <li data-l="en" lang="en">The same transport under Settings › Connection on both devices.</li>
+                <li data-l="it" lang="it">Bluetooth acceso, se usate Bluetooth. Su iOS servono i permessi Rete locale e Bluetooth; su Android, se il sistema lo chiede, i dispositivi nelle vicinanze.</li>
+                <li data-l="en" lang="en">Bluetooth on, if you use Bluetooth. On iOS you need Local Network and Bluetooth permission; on Android, if the system asks, nearby devices.</li>
+                <li data-l="it" lang="it">Se usate il Wi‑Fi: la stessa rete, non una rete ospite che isola i client.</li>
+                <li data-l="en" lang="en">If you use Wi‑Fi: the same network, not a guest network that isolates clients.</li>
+                <li data-l="it" lang="it">L’app in primo piano su entrambi, il Master acceso e vicino, e un codice di 6 cifre uguale a quello attuale del Master.</li>
+                <li data-l="en" lang="en">The app in the foreground on both, the Master on and nearby, and a 6-digit code that matches the Master’s current code.</li>
+              </ul>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Posso mescolare iPhone e Android?</span><span data-l="en" lang="en">Can I mix iPhone and Android?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Sì. Un Master iOS può servire Monitor Android e viceversa, con lo stesso codice e lo stesso trasporto.</p><p data-l="en" lang="en">Yes. An iOS Master can serve Android Monitors and the other way around, with the same code and transport.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">Sì. Un Master iPhone può servire Monitor Android, e il contrario. Codice e trasporto devono essere gli stessi su tutti.</p>
+              <p data-l="it" lang="it">Gli acquisti no: un piano comprato con l’Apple ID non vale sull’account Google, e il contrario. Su un telefono nuovo dello stesso store usa Ripristina acquisti (vedi la sezione Piani).</p>
+              <p data-l="en" lang="en">Yes. An iPhone Master can serve Android Monitors, and the other way around. The code and the transport must match on all of them.</p>
+              <p data-l="en" lang="en">Purchases do not: a plan bought with an Apple ID does not apply to a Google account, or the reverse. On a new phone from the same store use Restore purchases (see the Plans section).</p>
+            </div>
           </details>
           <details>
-            <summary><span data-l="it" lang="it">Come ripristino gli acquisti?</span><span data-l="en" lang="en">How do I restore purchases?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Apri il paywall (Impostazioni › Piano) e tocca <strong>Ripristina acquisti</strong>. Usa lo stesso account Apple o Google con cui hai sottoscritto. Su iPhone conferma l'Apple ID: poi leggi l'avviso (acquisti ripristinati, oppure nessuno per questo account). Per gestire l’abbonamento usa <strong>Gestisci abbonamento</strong> (si apre lo store).</p><p data-l="en" lang="en">Open the paywall (Settings › Plan) and tap <strong>Restore purchases</strong>. Use the same Apple or Google account you subscribed with. On iPhone confirm your Apple ID, then read the notice (purchases restored, or none for this account). To manage the subscription use <strong>Manage subscription</strong> (opens the store).</p></div>
+            <summary><span data-l="it" lang="it">Come cambio da Master a Monitor, o il contrario?</span><span data-l="en" lang="en">How do I switch from Master to Monitor, or back?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Apri Impostazioni › Account e tocca Logout. Torni alla scelta iniziale Master o Monitor. Brani, scalette e PDF restano sul dispositivo.</p>
+              <p data-l="it" lang="it">Se rientri come Master, l’app chiede di nuovo il PIN a 4 cifre. Il Monitor che colleghi dopo va abbinato con il codice attuale di Impostazioni › Connessione.</p>
+              <p data-l="en" lang="en">Open Settings › Account and tap Log out. You return to the initial Master or Monitor choice. Songs, setlists and PDFs stay on the device.</p>
+              <p data-l="en" lang="en">If you come back as Master, the app asks for the 4-digit PIN again. A Monitor you link afterwards is paired with the current code under Settings › Connection.</p>
+            </div>
           </details>
           <details>
-            <summary><span data-l="it" lang="it">Ho comprato Full per sempre: dove lo vedo?</span><span data-l="en" lang="en">I bought Full for life: where do I see it?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">In Impostazioni › Piano compare il badge verde <strong>Full per sempre</strong>, senza abbonamento né rinnovi. Se non lo vedi, apri <strong>Dettagli e ripristino acquisti</strong> e tocca <strong>Ripristina acquisti</strong> con lo stesso account Apple o Google.</p><p data-l="en" lang="en">Settings › Plan shows the green <strong>Full for life</strong> badge, with no subscription or renewals. If you don’t see it, open <strong>Details and restore purchases</strong> and tap <strong>Restore purchases</strong> with the same Apple or Google account.</p></div>
+            <summary><span data-l="it" lang="it">Ho dimenticato il PIN del Master</span><span data-l="en" lang="en">I forgot the Master PIN</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Sulla schermata di blocco tocca «PIN dimenticato?». Per reimpostarlo servono Face ID, Touch ID o il codice di sblocco del telefono. I brani, le scalette e i PDF restano nell’app.</p>
+              <p data-l="it" lang="it">Se il telefono non ha un blocco schermo, l’app lo dice con «Blocco schermo necessario»: attivalo nelle impostazioni di sistema e riprova. Quando sei già dentro, il PIN si cambia da Impostazioni › Account › Cambia PIN Master.</p>
+              <p data-l="en" lang="en">On the lock screen tap «Forgot PIN?». Resetting it needs Face ID, Touch ID or the phone passcode. Songs, setlists and PDFs stay in the app.</p>
+              <p data-l="en" lang="en">If the phone has no screen lock, the app says so with «Screen lock required»: turn one on in the system settings and try again. Once you are in, change the PIN from Settings › Account › Change Master PIN.</p>
+            </div>
+          </details>
+        </div>
+        </section>
+
+        <section class="faq-group" id="aiuto-brani">
+          <h2><span data-l="it" lang="it">Brani, playlist e repertori</span><span data-l="en" lang="en">Songs, playlists and repertoires</span></h2>
+          <div class="faq">
+          <details>
+            <summary><span data-l="it" lang="it">Dove aggiungo e modifico i brani?</span><span data-l="en" lang="en">Where do I add and edit songs?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Sul Master apri Impostazioni › Brani. La pagina si chiama «I tuoi brani». Se la lista è vuota, il pulsante è «Aggiungi il primo brano». Per i brani successivi è «Aggiungi». Poi imposta titolo, autore e colore: la barra colorata è quella che il Monitor mostra accanto al titolo.</p>
+              <p data-l="it" lang="it">Ogni modifica si salva da sola. Non c’è un pulsante Salva. Con il piano gratis restano utilizzabili i primi 5 brani del repertorio attivo; gli altri restano in lista, con il lucchetto, finché non passi a Pro o Full.</p>
+              <p data-l="en" lang="en">On the Master open Settings › Songs. The page is called «Your songs». If the list is empty, the button is «Add the first song». For the songs after that it is «Add». Then set the title, artist and colour: the coloured bar is what the Monitor shows next to the title.</p>
+              <p data-l="en" lang="en">Every change is saved on its own. There is no Save button. On the free plan the first 5 songs of the active repertoire stay usable; the others stay in the list, locked, until you move to Pro or Full.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Il PDF del brano non è nella lista</span><span data-l="en" lang="en">The song’s PDF is not in the list</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Nella finestra di scelta del PDF tocca <strong>Scegli file…</strong>: si apre l’esplora file del dispositivo e puoi prendere il PDF da qualsiasi posizione (File, Dropbox, iCloud…). SendSong ne tiene una copia nell’app.</p><p data-l="en" lang="en">In the PDF picker tap <strong>Choose file…</strong>: the device file browser opens and you can take the PDF from anywhere (Files, Dropbox, iCloud…). SendSong keeps a copy in the app.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">Nella scelta del PDF, se il file non è tra quelli della cartella, tocca «Scegli file…». Si apre l’esplora file del telefono: File, iCloud, Dropbox e le altre app che condividono documenti. SendSong tiene una copia del PDF dentro l’app, così lo spartito resta disponibile anche se sposti l’originale.</p>
+              <p data-l="it" lang="it">Per vedere solo i brani ancora senza spartito, apri il menu (⋮) e spunta «Solo brani senza PDF». Sopra la lista compare una striscia che ricorda il filtro; «Mostra tutti i brani» lo toglie. Un doppio tocco sul brano, dalla lista del Master, apre il PDF.</p>
+              <p data-l="en" lang="en">In the PDF picker, if the file is not among the folder’s files, tap «Choose file…». The phone’s file browser opens: Files, iCloud, Dropbox and other apps that share documents. SendSong keeps a copy of the PDF inside the app, so the chart stays available even if you move the original.</p>
+              <p data-l="en" lang="en">To see only songs that still have no chart, open the menu (⋮) and tick «Songs without PDF only». A strip above the list reminds you of the filter; «Show all songs» clears it. A double tap on the song, from the Master’s list, opens the PDF.</p>
+            </div>
           </details>
           <details>
-            <summary><span data-l="it" lang="it">Cos’è la prova Pro di 14 giorni?</span><span data-l="en" lang="en">What is the 14-day Pro trial?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Parte la prima volta che apri SendSong come <strong>Master</strong>, sul dispositivo, senza account né carta. Per 14 giorni hai Pro completo (brani e Monitor illimitati, repertori multipli, Effetti MIDI). La data di inizio è salvata solo sul dispositivo. Alla fine torni al piano gratis: restano attivi 5 brani, 1 repertorio e 1 Monitor. Gli altri brani restano salvati ma con lucchetto, e gli Effetti MIDI si spengono, finché non acquisti Pro o Full.</p><p data-l="en" lang="en">It starts the first time you open SendSong as <strong>Master</strong>, on the device, with no account or card. For 14 days you get full Pro (unlimited songs and Monitors, multiple repertoires, MIDI effects). The start date is stored on the device only. When it ends you return to the free plan: 5 songs, 1 repertoire and 1 Monitor stay active. The other songs stay saved but locked, and MIDI effects turn off, until you buy Pro or Full.</p></div>
+            <summary><span data-l="it" lang="it">A cosa serve «Scegli cartella»?</span><span data-l="en" lang="en">What is «Choose folder» for?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">In Impostazioni › Brani, sotto la ricerca, «Scegli cartella» indica dove tieni gli spartiti. Dopo la prima scelta il pulsante diventa «Cambia». SendSong propone i PDF di quella cartella e li abbina ai brani per nome del file.</p>
+              <p data-l="it" lang="it">La cartella è del repertorio attivo: un altro repertorio può puntare a una cartella diversa. Non è obbligatoria: «Scegli file…» copia comunque un PDF dentro l’app anche senza cartella.</p>
+              <p data-l="en" lang="en">Under Settings › Songs, below search, «Choose folder» says where you keep the charts. After the first choice the button becomes «Change». SendSong offers the PDFs in that folder and matches them to songs by filename.</p>
+              <p data-l="en" lang="en">The folder belongs to the active repertoire: another repertoire can point at a different folder. It is optional: «Choose file…» still copies a PDF into the app without a folder.</p>
+            </div>
           </details>
           <details>
-            <summary><span data-l="it" lang="it">I PDF sul Monitor sono a pagamento?</span><span data-l="en" lang="en">Are PDFs on the Monitor paid?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Titoli, brano attuale, prossimo e scaletta sul Monitor sono <strong>sempre gratis</strong>. Gli <strong>spartiti PDF</strong> sono gratis fino a <strong>5 file</strong> (pedale e inversione colori inclusi). Per una libreria illimitata, cartella collegata e annotazioni serve <strong>PDF Monitor</strong> o <strong>Full</strong> — da Impostazioni › Piano sul Monitor.</p><p data-l="en" lang="en">Titles, current and next song, and setlist on the Monitor are <strong>always free</strong>. <strong>PDF charts</strong> are free for up to <strong>5 files</strong> (pedal and colour invert included). For an unlimited library, linked folder and annotations you need <strong>PDF Monitor</strong> or <strong>Full</strong> — from Settings › Plan on the Monitor.</p></div>
+            <summary><span data-l="it" lang="it">Come modifico la playlist della serata?</span><span data-l="en" lang="en">How do I edit the night’s playlist?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Sulla home del Master, la matita in alto apre la striscia «Stai modificando la playlist». + accanto a un brano lo aggiunge, − lo toglie, il trascinamento riordina l’elenco PLAYLIST.</p>
+              <p data-l="it" lang="it">«Svuota», accanto a PLAYLIST, toglie tutti i brani: puoi annullare subito dall’avviso. «Fine» chiude la modifica: + e − spariscono e i brani non si spostano più per sbaglio. La pillola accanto alla matita è il brano in scena (ORA) e con un tocco ti riporta lì.</p>
+              <p data-l="en" lang="en">On the Master’s home, the pencil at the top opens the «You're editing the playlist» strip. + next to a song adds it, − removes it, and dragging reorders the PLAYLIST.</p>
+              <p data-l="en" lang="en">«Clear», next to PLAYLIST, removes every song: you can undo at once from the notice. «Done» closes editing: + and − disappear and songs no longer move by accident. The pill next to the pencil is the song on stage (NOW) and one tap takes you back there.</p>
+            </div>
           </details>
           <details>
-            <summary><span data-l="it" lang="it">Dove sono salvati brani e PDF?</span><span data-l="en" lang="en">Where are my songs and PDFs stored?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Sul dispositivo. I PDF sul Monitor stanno in una libreria locale; i backup che esporti restano file tuoi. Niente upload su server RitmoDigitale.</p><p data-l="en" lang="en">On the device. PDFs on the Monitor live in a local library; backups you export are your files. Nothing is uploaded to RitmoDigitale servers.</p></div>
+            <summary><span data-l="it" lang="it">Come salvo, riapro o condivido una playlist?</span><span data-l="en" lang="en">How do I save, reopen or share a playlist?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Dal menu (⋮): «Salva playlist…» le dà un nome e «Apri playlist salvata…» ne riapre una. Con una playlist aperta, «Salva «nome»» la aggiorna subito e «Salva come nuova…» ne fa una copia. Il nome compare accanto a PLAYLIST.</p>
+              <p data-l="it" lang="it">«Condividi playlist…» la manda ad altri dispositivi SendSong sulla stessa connessione. «Esporta in PDF» ne fa un file. La playlist in uso può riaprirsi al prossimo avvio del Master.</p>
+              <p data-l="en" lang="en">From the menu (⋮): «Save playlist…» gives it a name and «Open saved playlist…» reopens one. With a playlist open, «Save «name»» updates it right away and «Save as new…» makes a copy. The name appears next to PLAYLIST.</p>
+              <p data-l="en" lang="en">«Share playlist…» sends it to other SendSong devices on the same connection. «Export as PDF» makes a file. The playlist in use can reopen the next time the Master starts.</p>
+            </div>
           </details>
           <details>
-            <summary><span data-l="it" lang="it">Il pedale non volta pagina</span><span data-l="en" lang="en">My pedal does not turn pages</span></summary>
-            <div class="ans"><p data-l="it" lang="it">SendSong riconosce frecce, Page Up/Down, Spazio e Invio quando lo spartito PDF è aperto sul Monitor. Tieni l’app in primo piano e prova a collegare il pedale prima di aprire il PDF.</p><p data-l="en" lang="en">SendSong recognises arrow keys, Page Up/Down, Space and Enter while the PDF is open on the Monitor. Keep the app in the foreground and try pairing the pedal before opening the PDF.</p></div>
-          </details>
-          <details>
-            <summary><span data-l="it" lang="it">Cos’è Effetti MIDI e chi può usarlo?</span><span data-l="en" lang="en">What are MIDI effects and who can use them?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Sul Master, il pulsante <strong>Effetti</strong> in basso a sinistra invia CC via Bluetooth MIDI a processori (es. VoiceLive 3 Extreme con adattatore BLE). È incluso in <strong>Pro</strong> e <strong>Full</strong> (anche Full per sempre). Sul piano gratis resta spento. I device usati solo come Monitor non hanno questa funzione.</p><p data-l="en" lang="en">On the Master, the <strong>FX</strong> button at the bottom left sends CC over Bluetooth MIDI to processors (e.g. VoiceLive 3 Extreme with a BLE adapter). It is included in <strong>Pro</strong> and <strong>Full</strong> (including Full for life). It stays off on the free plan. Monitor-only devices do not have this feature.</p></div>
-          </details>
-          <details>
-            <summary><span data-l="it" lang="it">L’adattatore MIDI Bluetooth non compare</span><span data-l="en" lang="en">The Bluetooth MIDI adapter does not show up</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Attiva Impostazioni › MIDI › <strong>Effetti MIDI</strong>. Tieni l’adattatore acceso e vicino al Master, concedi il permesso Bluetooth e riprova. USB MIDI e Bluetooth audio non sono supportati: serve BLE MIDI (adattatore o device integrato).</p><p data-l="en" lang="en">Turn on Settings › MIDI › <strong>MIDI effects</strong>. Keep the adapter powered on and near the Master, grant Bluetooth permission and try again. USB MIDI and Bluetooth audio are not supported: you need BLE MIDI (adapter or built-in).</p></div>
-          </details>
-          <details>
-            <summary><span data-l="it" lang="it">I pulsanti MIDI non cambiano l’effetto</span><span data-l="en" lang="en">MIDI buttons do not change the effect</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Verifica che il <strong>canale MIDI</strong> in SendSong coincida con il canale di ricezione sul processore (1–16). Controlla che il cavo entri nel <strong>MIDI IN del processore</strong>. Con template Generico usa <strong>Impara</strong> per catturare il CC corretto.</p><p data-l="en" lang="en">Make sure the <strong>MIDI channel</strong> in SendSong matches the receive channel on the processor (1–16). Check that the cable goes into the <strong>processor’s MIDI IN</strong>. With the Generic template use <strong>Learn</strong> to capture the right CC.</p></div>
-          </details>
-          <details>
-            <summary><span data-l="it" lang="it">Ho comprato l’add-on Effetti MIDI in passato: funziona ancora?</span><span data-l="en" lang="en">I bought the MIDI effects add-on in the past: does it still work?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">L’add-on non è più in vendita: gli Effetti MIDI sono inclusi in Pro. Se l’avevi acquistato, <strong>Ripristina acquisti</strong> sul Master lo riconosce insieme a un piano che prevede gli effetti. Per i nuovi utenti basta Pro o Full.</p><p data-l="en" lang="en">The add-on is no longer for sale: MIDI effects are included in Pro. If you bought it, <strong>Restore purchases</strong> on the Master still recognises it with a plan that includes effects. New users only need Pro or Full.</p></div>
+            <summary><span data-l="it" lang="it">Come creo un altro repertorio?</span><span data-l="en" lang="en">How do I create another repertoire?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Ogni repertorio ha i propri brani, le proprie playlist salvate e la propria cartella PDF. Con il piano gratis ne hai uno, con fino a 5 brani attivi. Con Pro o Full puoi crearne altri.</p>
+              <p data-l="it" lang="it">Apri Impostazioni › PDF › Gestisci repertori: da lì crei, rinomini, cambi o elimini. In lista, il chip del repertorio attivo serve per passare da uno all’altro. Se il piano scade, i dati restano sul dispositivo e resta utilizzabile il repertorio attivo. Quello che avevi già all’aggiornamento si chiama «Il mio repertorio».</p>
+              <p data-l="en" lang="en">Each repertoire has its own songs, saved playlists and PDF folder. On the free plan you have one, with up to 5 active songs. With Pro or Full you can create more.</p>
+              <p data-l="en" lang="en">Open Settings › PDF › Manage repertoires: from there you create, rename, switch or delete. In the list, the active repertoire’s chip switches between them. If the plan lapses, the data stays on the device and the active repertoire stays usable. What you already had at the update is called «My repertoire».</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Come uso lo stesso repertorio su due dispositivi?</span><span data-l="en" lang="en">How do I use the same repertoire on two devices?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Metti entrambi i Master sulla stessa Wi‑Fi locale o Bluetooth. Sul device che ha il repertorio: menu (⋮) o Impostazioni › PDF › <strong>Invia repertorio</strong>. Sul secondo Master scegli <strong>Nuovo repertorio</strong> o <strong>Unisci</strong>. Per gli spartiti, punta entrambi alla stessa cartella PDF (es. Dropbox): i PDF non viaggiano nell’invio ma SendSong li ricollega per nome del file.</p><p data-l="en" lang="en">Put both Masters on the same local Wi‑Fi or Bluetooth. On the device that has the repertoire: menu (⋮) or Settings › PDF › <strong>Send repertoire</strong>. On the second Master pick <strong>New repertoire</strong> or <strong>Merge</strong>. For charts, point both devices at the same PDF folder (e.g. Dropbox): PDFs are not sent but SendSong relinks them by filename.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">I due Master devono usare la stessa connessione, Wi‑Fi locale o Bluetooth. Su quello che ha il repertorio apri il menu (⋮) oppure Impostazioni › PDF › Invia repertorio.</p>
+              <p data-l="it" lang="it">Sull’altro Master scegli una di queste voci:</p>
+              <p data-l="en" lang="en">The two Masters must use the same connection, local Wi‑Fi or Bluetooth. On the one that has the repertoire open the menu (⋮) or Settings › PDF › Send repertoire.</p>
+              <p data-l="en" lang="en">On the other Master pick one of these:</p>
+              <ul>
+                <li data-l="it" lang="it"><strong>Nuovo repertorio</strong> lo aggiunge come repertorio separato e lo apre. Sul piano gratis la voce è «Nuovo repertorio (piano Master)» e non puoi crearne un secondo.</li>
+                <li data-l="en" lang="en"><strong>New repertoire</strong> adds it as a separate repertoire and opens it. On the free plan the row is «New repertoire (Master plan)» and you cannot create a second one.</li>
+                <li data-l="it" lang="it"><strong>Unisci</strong> aggiunge solo i brani che mancano in quello attivo.</li>
+                <li data-l="en" lang="en"><strong>Merge</strong> adds only the songs missing from the active one.</li>
+                <li data-l="it" lang="it"><strong>Sostituisci attivo</strong> sostituisce quello attivo, dopo «Conferma sostituzione». Prima SendSong crea un backup locale.</li>
+                <li data-l="en" lang="en"><strong>Replace active</strong> replaces the active one, after «Confirm replace». SendSong creates a local backup first.</li>
+                <li data-l="it" lang="it"><strong>Annulla</strong> non cambia nulla.</li>
+                <li data-l="en" lang="en"><strong>Cancel</strong> changes nothing.</li>
+              </ul>
+              <p data-l="it" lang="it">I PDF non viaggiano nell’invio. Se entrambi i dispositivi puntano alla stessa cartella, per esempio Dropbox, SendSong ricollega gli spartiti per nome del file. Sul piano gratis l’import si ferma a 5 brani.</p>
+              <p data-l="en" lang="en">PDFs are not sent. If both devices point at the same folder, for example Dropbox, SendSong relinks the charts by filename. On the free plan the import stops at 5 songs.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Inviare un repertorio sovrascrive quello che ho?</span><span data-l="en" lang="en">Does sending a repertoire overwrite what I have?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Solo se scegli <strong>Sostituisci attivo</strong>: in quel caso SendSong crea prima un backup locale automatico. Con <strong>Unisci</strong> si aggiungono solo brani mancanti; con <strong>Nuovo repertorio</strong> non tocchi quello attivo.</p><p data-l="en" lang="en">Only if you choose <strong>Replace active</strong>: SendSong creates an automatic local backup first. With <strong>Merge</strong> only missing songs are added; with <strong>New repertoire</strong> the active one is left untouched.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">Solo se scegli «Sostituisci attivo». In quel caso l’app chiede «Conferma sostituzione» e, prima di sostituire, crea un backup locale che ritrovi in Impostazioni › Backup.</p>
+              <p data-l="it" lang="it">«Unisci» lascia i brani che hai già e aggiunge solo quelli mancanti. «Nuovo repertorio» non tocca quello attivo: il ricevuto diventa un repertorio a parte. «Annulla» chiude senza scrivere nulla.</p>
+              <p data-l="en" lang="en">Only if you choose «Replace active». The app then asks you to «Confirm replace» and, before replacing, creates a local backup you can find under Settings › Backup.</p>
+              <p data-l="en" lang="en">«Merge» keeps the songs you already have and adds only the missing ones. «New repertoire» does not touch the active one: the received set becomes a separate repertoire. «Cancel» closes without writing anything.</p>
+            </div>
+          </details>
+        </div>
+        </section>
+
+        <section class="faq-group" id="aiuto-spartiti">
+          <h2><span data-l="it" lang="it">Spartiti sul Monitor</span><span data-l="en" lang="en">Charts on the Monitor</span></h2>
+          <div class="faq">
+          <details>
+            <summary><span data-l="it" lang="it">I PDF sul Monitor sono a pagamento?</span><span data-l="en" lang="en">Are PDFs on the Monitor paid?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Titoli, brano attuale, prossimo e scaletta sul Monitor sono sempre gratis, su ogni piano. Gli spartiti PDF sono gratis fino a 5 file, pedale e inversione colori compresi. Dal sesto file in poi il PDF resta in libreria ma non si apre, finché non sblocchi gli spartiti.</p>
+              <p data-l="it" lang="it">Per una libreria senza limite, la cartella collegata e le annotazioni serve PDF Monitor oppure Full. L’acquisto si fa sul dispositivo usato come Monitor, in Impostazioni › Piano. Il piano Pro del Master sblocca brani, Monitor collegati e Effetti MIDI sul Master: gli spartiti illimitati sul leggìo stanno in PDF Monitor, e Full li include insieme al Pro.</p>
+              <p data-l="en" lang="en">Titles, the current song, the next one and the setlist on the Monitor are always free, on every plan. PDF charts are free for up to 5 files, pedal and colour invert included. From the sixth file on, the PDF stays in the library but does not open, until you unlock charts.</p>
+              <p data-l="en" lang="en">For a library with no cap, the linked folder and annotations you need PDF Monitor or Full. Buy it on the device used as Monitor, under Settings › Plan. The Master’s Pro plan unlocks songs, linked Monitors and MIDI effects on the Master: unlimited charts on the stand are in PDF Monitor, and Full includes them together with Pro.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Dove sono salvati brani e PDF?</span><span data-l="en" lang="en">Where are my songs and PDFs stored?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Sul dispositivo. I brani e le playlist stanno sul Master; i PDF del Monitor stanno nella sua libreria locale; i segni delle annotazioni restano sul telefono che li ha disegnati. Niente di questo viene caricato sui server di RitmoDigitale.</p>
+              <p data-l="it" lang="it">I backup di Impostazioni › Backup sono copie sullo stesso dispositivo (brani, playlist e collegamenti ai PDF). Per averne una da spostare, usa anche «Esporta in PDF» sulla playlist o «Scegli file…» quando vuoi una copia dello spartito dentro l’app.</p>
+              <p data-l="en" lang="en">On the device. Songs and playlists live on the Master; the Monitor’s PDFs live in its local library; annotation marks stay on the phone that drew them. None of this is uploaded to RitmoDigitale servers.</p>
+              <p data-l="en" lang="en">Backups under Settings › Backup are copies on the same device (songs, playlists and PDF links). To take one with you, also use «Export as PDF» on a playlist, or «Choose file…» when you want a copy of the chart inside the app.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Come volto pagina sullo spartito?</span><span data-l="en" lang="en">How do I turn the chart page?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Con il PDF aperto sul Monitor, tocca i lati della pagina per andare avanti o indietro. Al centro, con lo zoom normale, il tocco non volta pagina: così puoi indicare una battuta senza girare foglio. Pizzica per ingrandire.</p>
+              <p data-l="it" lang="it">Sul Master il PDF si apre con un doppio tocco sul brano. «Effetti» sta in basso a sinistra, «Annota» in alto a destra.</p>
+              <p data-l="en" lang="en">With the PDF open on the Monitor, tap the sides of the page to go forward or back. In the centre, at normal zoom, a tap does not turn the page: you can point at a bar without changing sheet. Pinch to zoom.</p>
+              <p data-l="en" lang="en">On the Master the PDF opens with a double tap on the song. «FX» is at the bottom left, «Annotate» at the top right.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Il pedale non volta pagina</span><span data-l="en" lang="en">My pedal does not turn pages</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Il pedale si usa sul Monitor, con lo spartito aperto e SendSong in primo piano. L’app legge frecce, Page Up, Page Down, Spazio e Invio: è il modo in cui la maggior parte dei pedali Bluetooth si presenta al telefono, come una tastiera.</p>
+              <p data-l="it" lang="it">Collega il pedale prima di aprire il PDF. Se non volta, controlla che non ci sia un’altra app davanti, che il Bluetooth del pedale sia connesso nelle impostazioni del telefono e che il PDF sia davvero aperto, non solo la scaletta. Il pedale di pagina non è l’adattatore degli Effetti MIDI: quello invia CC al processore, dal Master.</p>
+              <p data-l="en" lang="en">The pedal is used on the Monitor, with the chart open and SendSong in the foreground. The app reads arrow keys, Page Up, Page Down, Space and Enter: that is how most Bluetooth pedals appear to the phone, as a keyboard.</p>
+              <p data-l="en" lang="en">Connect the pedal before opening the PDF. If it does not turn, check that another app is not in front, that the pedal’s Bluetooth is connected in the phone settings, and that the PDF is actually open, not only the setlist. The page pedal is not the MIDI effects adapter: that one sends CC to the processor, from the Master.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Come annoto uno spartito?</span><span data-l="en" lang="en">How do I annotate a chart?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Con il PDF aperto tocca «Annota», in alto a destra. Compare una barra orizzontale: penna, evidenziatore, colori, annulla, gomma e altre azioni, tra cui le cancellazioni che chiedono conferma. «Fine» torna a zoom e scorrimento.</p>
+              <p data-l="it" lang="it">I segni restano solo sul dispositivo che li ha fatti. Quelli del Master non passano al Monitor, e il contrario. Annotazioni e cartella collegata, oltre i 5 PDF gratis, richiedono PDF Monitor o Full sul dispositivo che mostra gli spartiti.</p>
+              <p data-l="en" lang="en">With the PDF open tap «Annotate», at the top right. A horizontal bar appears: pen, highlighter, colours, undo, eraser and further actions, including clears that ask you to confirm. «Done» returns to zoom and scrolling.</p>
+              <p data-l="en" lang="en">Marks stay only on the device that made them. The Master’s marks do not go to the Monitor, or the reverse. Annotations and a linked folder, past the 5 free PDFs, need PDF Monitor or Full on the device that shows the charts.</p>
+            </div>
+          </details>
+        </div>
+        </section>
+
+        <section class="faq-group" id="aiuto-midi">
+          <h2><span data-l="it" lang="it">Effetti MIDI</span><span data-l="en" lang="en">MIDI effects</span></h2>
+          <div class="faq">
+          <details>
+            <summary><span data-l="it" lang="it">Cos’è Effetti MIDI e chi può usarlo?</span><span data-l="en" lang="en">What are MIDI effects and who can use them?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">È sul Master. Con l’interruttore acceso, il pulsante «Effetti» compare in basso a sinistra, sia sulla lista brani sia sullo spartito. Il pannello si apre come scheda ancorata al pulsante: tocchi i tasti e invii Control Change (CC) via Bluetooth MIDI a processori vocali, pedaliere e altri device che accettano CC.</p>
+              <p data-l="it" lang="it">Esempio tipico: TC‑Helicon VoiceLive 3 Extreme, con un adattatore BLE sul DIN MIDI IN del processore (Yamaha MD‑BT01, CME WIDI Master). Un device con BLE MIDI integrato si collega senza adattatore. «Annota», sullo spartito, resta in alto a destra e non c’entra con il MIDI.</p>
+              <p data-l="it" lang="it">L’interruttore è in Impostazioni › MIDI › Effetti MIDI ed è spento di default. La funzione è inclusa in Pro e Full, anche Full per sempre e anche durante la prova di 14 giorni. Sul piano gratis resta spenta. Un dispositivo usato solo come Monitor non ha questa sezione.</p>
+              <p data-l="en" lang="en">It lives on the Master. With the switch on, the «FX» button appears at the bottom left, both on the song list and on the chart. The panel opens as a card anchored to the button: tap tiles to send Control Change (CC) over Bluetooth MIDI to vocal processors, pedalboards and other gear that accepts CC.</p>
+              <p data-l="en" lang="en">A typical example: TC‑Helicon VoiceLive 3 Extreme, with a BLE adapter on the processor’s DIN MIDI IN (Yamaha MD‑BT01, CME WIDI Master). A device with built-in BLE MIDI connects without an adapter. «Annotate», on the chart, stays at the top right and is not part of MIDI.</p>
+              <p data-l="en" lang="en">The switch is under Settings › MIDI › MIDI effects and is off by default. The feature is included in Pro and Full, including Full for life and the 14-day trial. It stays off on the free plan. A device used only as Monitor does not have this section.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">L’adattatore MIDI Bluetooth non compare</span><span data-l="en" lang="en">The Bluetooth MIDI adapter does not show up</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Controlla in quest’ordine:</p>
+              <p data-l="en" lang="en">Check in this order:</p>
+              <ul>
+                <li data-l="it" lang="it">Impostazioni › MIDI › interruttore Effetti MIDI acceso. Da spento non parte la scansione Bluetooth degli effettori.</li>
+                <li data-l="en" lang="en">Settings › MIDI › MIDI effects switch on. While it is off, Bluetooth scanning for effects gear does not start.</li>
+                <li data-l="it" lang="it">Piano Pro, Full o prova ancora attiva. Sul gratis l’interruttore non abilita gli effetti.</li>
+                <li data-l="en" lang="en">Pro, Full, or a trial that is still running. On the free plan the switch does not enable effects.</li>
+                <li data-l="it" lang="it">Adattatore acceso e vicino al Master. Il cavo DIN entra nel MIDI IN del processore.</li>
+                <li data-l="en" lang="en">Adapter powered on and near the Master. The DIN cable goes into the processor’s MIDI IN.</li>
+                <li data-l="it" lang="it">Permesso Bluetooth concesso. Su Android, se il sistema lo chiede, anche i dispositivi nelle vicinanze.</li>
+                <li data-l="en" lang="en">Bluetooth permission granted. On Android, if the system asks, nearby devices as well.</li>
+              </ul>
+              <p data-l="it" lang="it">Non compaiono gli apparecchi Bluetooth audio, le interfacce USB MIDI e un cavo DIN senza adattatore BLE. Il Bluetooth con cui il Master parla ai Monitor è un collegamento diverso da quello degli effetti.</p>
+              <p data-l="en" lang="en">Bluetooth audio devices, USB MIDI interfaces and a DIN cable without a BLE adapter do not appear. The Bluetooth link the Master uses for Monitors is a different connection from the effects link.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">I pulsanti MIDI non cambiano l’effetto</span><span data-l="en" lang="en">MIDI buttons do not change the effect</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Il collegamento c’è, ma il processore non riconosce il messaggio. Controlla tre cose.</p>
+              <p data-l="en" lang="en">The link is there, but the processor does not recognise the message. Check three things.</p>
+              <ul>
+                <li data-l="it" lang="it">Il canale MIDI in SendSong (1–16) è lo stesso canale di ricezione sul processore. «Impara» lo allinea al primo CC che arriva dal device.</li>
+                <li data-l="en" lang="en">The MIDI channel in SendSong (1–16) is the same receive channel on the processor. «Learn» aligns it to the first CC that arrives from the device.</li>
+                <li data-l="it" lang="it">Il cavo DIN è nel MIDI IN del processore, non nel MIDI OUT.</li>
+                <li data-l="en" lang="en">The DIN cable is in the processor’s MIDI IN, not MIDI OUT.</li>
+                <li data-l="it" lang="it">Il template corrisponde al device. VoiceLive 3 Extreme porta i CC di fabbrica: Harmony, Reverb, Delay, Double, HardTune, μMod, Transducer, Hit, All Off, Tap. Generico parte vuoto: dai un nome, un CC da 0 a 127, «Acceso/spento» o «Impulso», poi usa Impara.</li>
+                <li data-l="en" lang="en">The template matches the device. VoiceLive 3 Extreme brings the factory CCs: Harmony, Reverb, Delay, Double, HardTune, μMod, Transducer, Hit, All Off, Tap. Generic starts empty: give it a name, a CC from 0 to 127, «On/off» or «Momentary», then use Learn.</li>
+              </ul>
+              <p data-l="it" lang="it">Più processori possono condividere lo stesso adattatore tramite MIDI THRU, ciascuno sul proprio canale.</p>
+              <p data-l="en" lang="en">Several processors can share the same adapter through MIDI THRU, each on its own channel.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Ho comprato l’add-on Effetti MIDI in passato: funziona ancora?</span><span data-l="en" lang="en">I bought the MIDI effects add-on in the past: does it still work?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">L’add-on non è più in vendita. Gli Effetti MIDI sono inclusi in Pro e in Full. Se l’avevi già comprato, sul Master apri Impostazioni › Piano › Dettagli e ripristino acquisti e tocca Ripristina acquisti, con lo stesso account dello store: l’app lo riconosce ancora, insieme a un piano che prevede gli effetti.</p>
+              <p data-l="it" lang="it">Per chi compra adesso basta Pro o Full. Non serve un secondo acquisto solo per il MIDI.</p>
+              <p data-l="en" lang="en">The add-on is no longer for sale. MIDI effects are included in Pro and Full. If you already bought it, on the Master open Settings › Plan › Details and restore purchases and tap Restore purchases, with the same store account: the app still recognises it, together with a plan that includes effects.</p>
+              <p data-l="en" lang="en">For anyone buying now, Pro or Full is enough. You do not need a second purchase just for MIDI.</p>
+            </div>
+          </details>
+        </div>
+        </section>
+
+        <section class="faq-group" id="aiuto-piani">
+          <h2><span data-l="it" lang="it">Piani e acquisti</span><span data-l="en" lang="en">Plans and purchases</span></h2>
+          <div class="faq">
+          <details>
+            <summary><span data-l="it" lang="it">Cosa include ogni piano?</span><span data-l="en" lang="en">What does each plan include?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">I prezzi li mostra lo store, in Impostazioni › Piano. Le funzioni sono queste:</p>
+              <p data-l="en" lang="en">The store shows the prices, under Settings › Plan. The features are these:</p>
+              <ul>
+                <li data-l="it" lang="it"><strong>Gratis</strong>: sul Master, 5 brani attivi, 1 repertorio e 1 Monitor collegato. Effetti MIDI spenti. Sul Monitor, titoli e scaletta sempre, e fino a 5 PDF.</li>
+                <li data-l="en" lang="en"><strong>Free</strong>: on the Master, 5 active songs, 1 repertoire and 1 linked Monitor. MIDI effects off. On the Monitor, titles and setlist always, and up to 5 PDFs.</li>
+                <li data-l="it" lang="it"><strong>PDF Monitor</strong>: sul dispositivo Monitor, spartiti senza limite, cartella collegata e annotazioni.</li>
+                <li data-l="en" lang="en"><strong>PDF Monitor</strong>: on the Monitor device, charts with no cap, a linked folder and annotations.</li>
+                <li data-l="it" lang="it"><strong>Pro</strong>: sul Master, brani e Monitor collegati senza limite, più repertori, Effetti MIDI inclusi.</li>
+                <li data-l="en" lang="en"><strong>Pro</strong>: on the Master, songs and linked Monitors with no cap, more repertoires, MIDI effects included.</li>
+                <li data-l="it" lang="it"><strong>Full</strong>: Pro sul Master e PDF Monitor insieme. «Full per sempre» è lo stesso sblocco, senza abbonamento e senza rinnovi.</li>
+                <li data-l="en" lang="en"><strong>Full</strong>: Pro on the Master and PDF Monitor together. «Full for life» is the same unlock, with no subscription and no renewals.</li>
+              </ul>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Cos’è la prova Pro di 14 giorni?</span><span data-l="en" lang="en">What is the 14-day Pro trial?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Parte la prima volta che apri SendSong come Master, su quel dispositivo, senza account e senza carta. Per 14 giorni hai il Pro: brani e Monitor senza limite, più repertori, Effetti MIDI. La data di inizio resta solo sul dispositivo.</p>
+              <p data-l="it" lang="it">Alla fine torni al piano gratis. Restano utilizzabili 5 brani, 1 repertorio e 1 Monitor. Gli altri brani restano salvati ma con il lucchetto, e gli Effetti MIDI si spengono, finché non acquisti Pro o Full. La prova non sblocca da sola i PDF illimitati sul Monitor: quelli stanno in PDF Monitor o in Full.</p>
+              <p data-l="en" lang="en">It starts the first time you open SendSong as Master, on that device, with no account and no card. For 14 days you have Pro: songs and Monitors with no cap, more repertoires, MIDI effects. The start date stays on the device only.</p>
+              <p data-l="en" lang="en">When it ends you return to the free plan. 5 songs, 1 repertoire and 1 Monitor stay usable. The other songs stay saved but locked, and MIDI effects turn off, until you buy Pro or Full. The trial does not by itself unlock unlimited PDFs on the Monitor: those are in PDF Monitor or Full.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Come ripristino gli acquisti?</span><span data-l="en" lang="en">How do I restore purchases?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Apri Impostazioni › Piano, poi «Dettagli e ripristino acquisti», e tocca «Ripristina acquisti». Usa lo stesso account Apple o Google con cui hai pagato. Su iPhone conferma l’Apple ID e leggi l’avviso: acquisti ripristinati, oppure nessuno per questo account.</p>
+              <p data-l="it" lang="it">Per cambiare o disdire un abbonamento tocca «Gestisci abbonamento»: si apre lo store. Se i prezzi non compaiono, l’app dice che non riesce a leggerli e il pulsante di acquisto resta fermo. Controlla la connessione e l’account dello store, poi tocca «Riprova».</p>
+              <p data-l="en" lang="en">Open Settings › Plan, then «Details and restore purchases», and tap «Restore purchases». Use the same Apple or Google account you paid with. On iPhone confirm the Apple ID and read the notice: purchases restored, or none for this account.</p>
+              <p data-l="en" lang="en">To change or cancel a subscription tap «Manage subscription»: the store opens. If prices do not appear, the app says it cannot read them and the buy button stays still. Check the connection and the store account, then tap «Retry».</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Ho comprato Full per sempre: dove lo vedo?</span><span data-l="en" lang="en">I bought Full for life: where do I see it?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">In Impostazioni › Piano compare il badge «Full per sempre» e, al posto di un nuovo acquisto, la scritta «Hai Full per sempre». Non c’è abbonamento e non ci sono rinnovi. Include il Pro sul Master e il PDF Monitor.</p>
+              <p data-l="it" lang="it">Se non lo vedi, apri «Dettagli e ripristino acquisti» e tocca «Ripristina acquisti» con lo stesso Apple ID o account Google dell’acquisto. Un Full comprato su Apple non compare su Android, e il contrario.</p>
+              <p data-l="en" lang="en">Settings › Plan shows the «Full for life» badge and, instead of a new purchase, the line «You have Full for life». There is no subscription and there are no renewals. It includes Pro on the Master and PDF Monitor.</p>
+              <p data-l="en" lang="en">If you do not see it, open «Details and restore purchases» and tap «Restore purchases» with the same Apple ID or Google account as the purchase. A Full bought on Apple does not appear on Android, or the reverse.</p>
+            </div>
           </details>
           <details>
             <summary><span data-l="it" lang="it">Gli acquisti valgono anche su altri miei telefoni?</span><span data-l="en" lang="en">Do purchases work on my other phones too?</span></summary>
-            <div class="ans"><p data-l="it" lang="it">Sì, sullo <strong>stesso account</strong> dello store (Apple ID su iPhone, iPad e Mac; account Google su Android). Su un device nuovo apri Impostazioni › Piano e tocca <strong>Ripristina acquisti</strong>. Gli acquisti <strong>non</strong> si trasferiscono tra Apple e Android: sono store diversi.</p><p data-l="en" lang="en">Yes, with the <strong>same store account</strong> (Apple ID on iPhone, iPad and Mac; Google account on Android). On a new device open Settings › Plan and tap <strong>Restore purchases</strong>. Purchases do <strong>not</strong> carry over between Apple and Android: they are different stores.</p></div>
+            <div class="ans">
+              <p data-l="it" lang="it">Sì, sullo stesso account dello store: Apple ID su iPhone, iPad e Mac; account Google su Android. Sul dispositivo nuovo apri Impostazioni › Piano e tocca «Ripristina acquisti». Il piano segue l’account, non il telefono.</p>
+              <p data-l="it" lang="it">Non passano da Apple a Google. Sono due store. Brani e PDF, invece, non viaggiano con l’acquisto: restano sul dispositivo, e si spostano con un repertorio inviato o con un backup.</p>
+              <p data-l="en" lang="en">Yes, on the same store account: Apple ID on iPhone, iPad and Mac; Google account on Android. On the new device open Settings › Plan and tap «Restore purchases». The plan follows the account, not the phone.</p>
+              <p data-l="en" lang="en">They do not move from Apple to Google. Those are two stores. Songs and PDFs, on the other hand, do not travel with the purchase: they stay on the device, and move with a sent repertoire or a backup.</p>
+            </div>
           </details>
         </div>
+        </section>
+
+        <section class="faq-group" id="aiuto-backup">
+          <h2><span data-l="it" lang="it">Backup</span><span data-l="en" lang="en">Backup</span></h2>
+          <div class="faq">
+          <details>
+            <summary><span data-l="it" lang="it">Come creo un backup e come lo ripristino?</span><span data-l="en" lang="en">How do I create a backup and restore it?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Apri Impostazioni › Backup. Vedi la data dell’ultimo backup e l’elenco di quelli già sul dispositivo: brani, playlist e collegamenti ai PDF. «Crea backup» ne fa uno subito. L’app ne crea anche uno da sola ogni tanto.</p>
+              <p data-l="it" lang="it">Per tornare indietro tocca «Ripristina» accanto al backup che vuoi e conferma. I file restano sul dispositivo: non li carichiamo su un server. Un backup nasce anche da solo quando scegli «Sostituisci attivo» ricevendo un repertorio.</p>
+              <p data-l="en" lang="en">Open Settings › Backup. You see the date of the last backup and the list of those already on the device: songs, playlists and PDF links. «Create backup» makes one now. The app also makes one on its own from time to time.</p>
+              <p data-l="en" lang="en">To go back, tap «Restore» next to the backup you want and confirm. The files stay on the device: we do not upload them to a server. A backup is also created on its own when you choose «Replace active» while receiving a repertoire.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Ho ripristinato il backup ma vedo solo 5 brani</span><span data-l="en" lang="en">I restored the backup but I only see 5 songs</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Sul piano gratis il ripristino tiene utilizzabili i primi 5 brani. L’app lo dice con «Ripristinati solo i primi 5 brani. Passa a Pro per usarli tutti.» Gli altri restano nel backup: con Pro o Full, un nuovo ripristino li rende di nuovo utilizzabili.</p>
+              <p data-l="it" lang="it">Lo stesso tetto vale per un repertorio ricevuto: sul gratis l’import si ferma a 5 brani. Il backup non sposta i file PDF da un telefono all’altro; ricollega gli spartiti se i nomi dei file coincidono con la cartella che hai scelto.</p>
+              <p data-l="en" lang="en">On the free plan a restore keeps the first 5 songs usable. The app says so with «Only the first 5 songs were restored. Upgrade to Pro to use them all.» The others stay in the backup: with Pro or Full, restoring again makes them usable once more.</p>
+              <p data-l="en" lang="en">The same cap applies to a repertoire you receive: on the free plan the import stops at 5 songs. The backup does not move PDF files from one phone to another; it relinks charts when the filenames match the folder you chose.</p>
+            </div>
+          </details>
+        </div>
+        </section>
+        <p class="faq-empty" id="support-empty" hidden><span data-l="it" lang="it">Nessuna risposta per questa ricerca. Prova un’altra parola, oppure scrivi a <a href="mailto:info@ritmodigitale.it">info@ritmodigitale.it</a>.</span><span data-l="en" lang="en">No answers for this search. Try another word, or write to <a href="mailto:info@ritmodigitale.it">info@ritmodigitale.it</a>.</span></p>
       </article>
     </div>
   </main>

@@ -70,6 +70,7 @@
     if (save) storageOK = sset(LANG_KEY, l);
     applyLinks();
     if (heroRedraw) heroRedraw();
+    if (window.sendsongRefreshSupport) window.sendsongRefreshSupport();
   }
 
   setLang(detectLang(), !!params.get('lang'));
@@ -148,5 +149,66 @@
     }
     initHero();
     initCopy();
+    initSupportSearch();
   });
+
+  function supportLang() {
+    return document.documentElement.getAttribute('data-lang') === 'en' ? 'en' : 'it';
+  }
+
+  function supportText(root) {
+    var lang = supportLang();
+    var out = [];
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      var el = node.parentElement;
+      if (!el) continue;
+      var marked = el.closest('[data-l]');
+      if (marked && marked.getAttribute('data-l') !== lang) continue;
+      out.push(node.nodeValue);
+    }
+    return out.join(' ');
+  }
+
+  function supportNorm(value) {
+    return (value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function initSupportSearch() {
+    var input = document.getElementById('support-q');
+    var empty = document.getElementById('support-empty');
+    if (!input) return;
+    var groups = document.querySelectorAll('.faq-group');
+    var itPlaceholder = input.getAttribute('placeholder') || '';
+    var enPlaceholder = input.getAttribute('data-en-placeholder') || itPlaceholder;
+    function apply() {
+      input.placeholder = supportLang() === 'en' ? enPlaceholder : itPlaceholder;
+      var q = supportNorm(input.value.trim());
+      var any = false;
+      Array.prototype.forEach.call(groups, function (group) {
+        var head = group.querySelector('h2');
+        var headMatch = q && head && supportNorm(supportText(head)).indexOf(q) !== -1;
+        var shown = 0;
+        Array.prototype.forEach.call(group.querySelectorAll('details'), function (item) {
+          var ok = !q || headMatch || supportNorm(supportText(item)).indexOf(q) !== -1;
+          item.hidden = !ok;
+          if (ok) shown += 1;
+        });
+        group.hidden = shown === 0;
+        if (shown) any = true;
+      });
+      Array.prototype.forEach.call(document.querySelectorAll('.support-jump a'), function (link) {
+        var id = (link.getAttribute('href') || '').replace(/^#/, '');
+        var group = id ? document.getElementById(id) : null;
+        link.hidden = !!(group && group.hidden);
+      });
+      var jump = document.querySelector('.support-jump');
+      if (jump) jump.setAttribute('aria-label', supportLang() === 'en' ? 'Sections' : 'Sezioni');
+      if (empty) empty.hidden = any || !q;
+    }
+    input.addEventListener('input', apply);
+    window.sendsongRefreshSupport = apply;
+    apply();
+  }
 })();
