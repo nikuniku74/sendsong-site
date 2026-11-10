@@ -349,6 +349,7 @@ h2 { font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 24px; text-wrap: balanc
 .foot-brand p { margin: 0; }
 .foot-nav { display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: center; }
 .foot-nav a { color: var(--ink); }
+.foot-nav a[aria-current="page"] { color: var(--accent); }
 
 .page { padding: 72px 0 96px; }
 .doc { max-width: none; }
