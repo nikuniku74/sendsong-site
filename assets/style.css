@@ -294,17 +294,22 @@ h2 { font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 24px; text-wrap: balanc
 .shots figure { margin: 0; }
 .device {
   position: relative; width: 100%;
-  border-radius: 14% / 7%; padding: 3%;
-  background: #08090c; border: 1px solid #333642;
-  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, .65), inset 0 0 0 1px #1a1c24;
+  padding: 12px;
+  border-radius: 36px;
+  background: linear-gradient(165deg, #2a2c34 0%, #121318 46%, #0a0b0e 100%);
+  border: 1px solid #3c3f4a;
+  box-shadow: 0 22px 40px -20px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .07);
 }
-.device.phone { aspect-ratio: 1206 / 2622; max-width: 220px; margin-inline: auto; }
-.device.tablet {
-  aspect-ratio: 4 / 3; max-width: 100%; border-radius: 8% / 6%; padding: 2.2%;
+.device.phone { max-width: 240px; margin-inline: auto; }
+.device.tablet { max-width: 100%; padding: 28px; border-radius: 40px; }
+.device .screen {
+  position: relative; width: 100%;
+  aspect-ratio: 1170 / 2532;
+  border-radius: 26px; overflow: hidden; background: #0E0F13;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .45);
 }
-.device .screen { position: relative; width: 100%; height: 100%; border-radius: 10% / 5%; overflow: hidden; background: #0E0F13; }
-.device.tablet .screen { border-radius: 5% / 4%; }
-.device img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity .35s; }
+.device.tablet .screen { aspect-ratio: 2360 / 1640; border-radius: 18px; }
+.device img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; opacity: 0; transition: opacity .35s; }
 .device img.ok { opacity: 1; }
 .shots figcaption { margin-top: 14px; text-align: center; font-size: 14px; color: var(--muted); font-family: var(--font-head); font-weight: 600; letter-spacing: .02em; }
 
@@ -384,7 +389,8 @@ dl.facts dd { margin: 0; }
 .guide-body .steps-inline li { margin-bottom: 1em; padding-left: .3em; }
 .guide-body .steps-inline strong { font-family: var(--font-head); display: block; margin-bottom: 4px; }
 .guide-shot { margin: 24px 0; }
-.guide-shot .device { max-width: 200px; }
+.guide-shot .device.phone { max-width: 220px; }
+.guide-shot .device.tablet { max-width: 640px; }
 
 .contact { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; margin: 28px 0 8px; }
 .contact .label { color: var(--muted); font-size: 15px; margin-bottom: 6px; }
