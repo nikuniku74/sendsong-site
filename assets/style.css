@@ -406,18 +406,22 @@ dl.facts dd { margin: 0; }
 .btn:hover { border-color: var(--accent-brand); }
 .btn.done { border-color: var(--accent-brand); color: var(--accent); }
 .doc h2.faq-title { margin-top: 56px; }
-.support-search { margin: 4px 0 8px; }
-.support-search label {
+.support-search, .guide-search { margin: 4px 0 8px; }
+.guide-search { margin: 8px 0 28px; }
+.support-search label, .guide-search label {
   display: block; font-family: var(--font-head); font-size: 13px; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
 }
-.support-search input {
+.support-search input, .guide-search input {
   width: 100%; font: inherit; font-size: 17px; color: var(--ink);
   background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
   padding: 14px 16px;
 }
-.support-search input::placeholder { color: var(--muted); }
-.support-search .hint { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+.support-search input::placeholder, .guide-search input::placeholder { color: var(--muted); }
+.support-search .hint, .guide-search .hint { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+.guide-toc li[hidden], section.guide-section[hidden] { display: none !important; }
+.guide-body ol.steps { list-style: decimal; padding-left: 1.4em; margin: 0 0 1.2em; }
+.guide-body ol.steps li { margin-bottom: .9em; }
 .support-jump { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 28px; }
 .support-jump a {
   font-size: 14px; font-weight: 600; color: var(--ink); text-decoration: none;

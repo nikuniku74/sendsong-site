@@ -71,6 +71,7 @@
     applyLinks();
     if (heroRedraw) heroRedraw();
     if (window.sendsongRefreshSupport) window.sendsongRefreshSupport();
+    if (window.sendsongRefreshGuide) window.sendsongRefreshGuide();
   }
 
   setLang(detectLang(), !!params.get('lang'));
@@ -150,6 +151,7 @@
     initHero();
     initCopy();
     initSupportSearch();
+    initGuideSearch();
   });
 
   function supportLang() {
@@ -209,6 +211,37 @@
     }
     input.addEventListener('input', apply);
     window.sendsongRefreshSupport = apply;
+    apply();
+  }
+
+  function initGuideSearch() {
+    var input = document.getElementById('guide-q');
+    var empty = document.getElementById('guide-empty');
+    if (!input) return;
+    var sections = document.querySelectorAll('section.guide-section');
+    var itPlaceholder = input.getAttribute('placeholder') || '';
+    var enPlaceholder = input.getAttribute('data-en-placeholder') || itPlaceholder;
+    function apply() {
+      input.placeholder = supportLang() === 'en' ? enPlaceholder : itPlaceholder;
+      var q = supportNorm(input.value.trim());
+      var any = false;
+      Array.prototype.forEach.call(sections, function (section) {
+        var ok = !q || supportNorm(supportText(section)).indexOf(q) !== -1;
+        section.hidden = !ok;
+        if (ok) any = true;
+      });
+      Array.prototype.forEach.call(document.querySelectorAll('.guide-toc a'), function (link) {
+        var id = (link.getAttribute('href') || '').replace(/^#/, '');
+        var section = id ? document.getElementById(id) : null;
+        var item = link.closest('li');
+        if (item) item.hidden = !!(section && section.hidden);
+      });
+      var toc = document.querySelector('.guide-toc');
+      if (toc) toc.setAttribute('aria-label', supportLang() === 'en' ? 'Guide contents' : 'Indice guida');
+      if (empty) empty.hidden = any || !q;
+    }
+    input.addEventListener('input', apply);
+    window.sendsongRefreshGuide = apply;
     apply();
   }
 })();
