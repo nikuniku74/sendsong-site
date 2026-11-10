@@ -454,7 +454,6 @@ dl.facts dd { margin: 0; }
 @media (max-width: 960px) {
   .steps { grid-template-columns: 1fr; }
   .feats { grid-template-columns: 1fr 1fr; }
-  .plans { grid-template-columns: 1fr 1fr; gap: 16px; }
   .shots { grid-template-columns: 1fr 1fr; }
   .shots li, .shots li.wide { grid-column: span 1; }
   .guide-layout { grid-template-columns: 1fr; }
