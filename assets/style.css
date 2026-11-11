@@ -1,11 +1,11 @@
 /* SendSong — sito prodotto. Palco scuro, tipografia condensata. */
 
 :root {
-  --bg: #0E0F13;
-  --surface: #16171D;
-  --raised: #1E2028;
-  --line: #2B2D37;
-  --ink: #F3F3F6;
+  --bg: #07080C;
+  --surface: #10131A;
+  --raised: #1C2230;
+  --line: #2A3142;
+  --ink: #F4F6FB;
   --muted: #A3A5B2;
   --accent: #FF4FA3;
   --accent-brand: #E4016D;
@@ -24,7 +24,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
+  :root:not([data-theme="dark"]):not([data-theme="stage"]) {
     --bg: #F5F5F7;
     --surface: #FFFFFF;
     --raised: #F0F0F3;

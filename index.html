@@ -1,12 +1,11 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" data-theme="stage">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-en="SendSong — Your live setlist on every music stand">SendSong — La scaletta live, su ogni leggio</title>
   <meta name="description" content="SendSong collega il Master al palco: brano attuale e prossimo su ogni Monitor, spartiti PDF, Wi‑Fi o Bluetooth. Senza internet, senza account." data-en="SendSong links your Master to the stage: current and next song on every Monitor, PDF charts, Wi‑Fi or Bluetooth. No internet, no account.">
-  <meta name="theme-color" content="#0E0F13" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#F5F5F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07080C">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nikuniku74.github.io/sendsong-site/">
   <link rel="canonical" href="https://nikuniku74.github.io/sendsong-site/">
@@ -16,45 +15,64 @@
   <meta property="og:image" content="https://nikuniku74.github.io/sendsong-site/assets/img/icon.png">
   <link rel="icon" type="image/png" href="assets/img/icon-180.png">
   <link rel="apple-touch-icon" href="assets/img/icon-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Condensed:wght@400;700;800&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=12">
-  <script src="assets/site.js?v=12"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css">
+  <link rel="stylesheet" href="assets/landing.css?v=11">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="assets/i18n.js?v=5"></script>
+  <script src="assets/site.js?v=13"></script>
 </head>
-<body>
-  <a class="skip" href="#main"><span data-l="it" lang="it">Salta al contenuto</span><span data-l="en" lang="en">Skip to content</span></a>
-  <header class="site-header on-hero">
-    <div class="wrap">
-      <span aria-hidden="true"></span>
-      <nav class="nav" aria-label="Menu">
-        <a href="guide.html"><span data-l="it" lang="it">Guida</span><span data-l="en" lang="en">Guide</span></a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html"><span data-l="it" lang="it">Supporto</span><span data-l="en" lang="en">Support</span></a>
-        <div class="lang" role="group" aria-label="Lingua / Language">
-          <button type="button" data-set-lang="it" aria-pressed="true" lang="it">IT</button><span aria-hidden="true">/</span><button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
-        </div>
-      </nav>
+<body class="bg-base-100 text-base-content antialiased">
+  <a class="skip btn btn-primary btn-sm" href="#main" data-i18n="skip">Salta al contenuto</a>
+  <header class="navbar sticky top-0 z-50 border-b border-base-300 bg-base-200 px-4 lg:px-8">
+    <div class="navbar-start">
+      <a href="#top" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <img src="assets/img/mark-64.png" alt="" width="32" height="32">
+        Send<span class="text-primary">Song</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#funziona" data-i18n="nav.how">Come funziona</a></li>
+        <li><a href="#screenshot" data-i18n="nav.stage">Sul palco</a></li>
+        <li><a href="#piani" data-i18n="nav.plans">Piani</a></li>
+        <li><a href="guide.html" data-i18n="nav.guide">Guida</a></li>
+        <li><a href="support.html" data-i18n="nav.support">Supporto</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end gap-2">
+      <div class="join" role="group" data-i18n-aria="nav.lang" aria-label="Lingua">
+        <button type="button" class="btn btn-sm join-item" data-set-lang="it" aria-pressed="true" lang="it">IT</button>
+        <button type="button" class="btn btn-sm join-item" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <details class="dropdown dropdown-end lg:hidden">
+        <summary class="btn btn-ghost btn-square" data-i18n-aria="nav.menu" aria-label="Menu">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </summary>
+        <ul class="dropdown-content menu z-20 mt-2 w-52 rounded-box bg-base-200 p-2 shadow">
+          <li><a href="#funziona" data-i18n="nav.how">Come funziona</a></li>
+          <li><a href="#screenshot" data-i18n="nav.stage">Sul palco</a></li>
+          <li><a href="#piani" data-i18n="nav.plans">Piani</a></li>
+          <li><a href="guide.html" data-i18n="nav.guide">Guida</a></li>
+          <li><a href="privacy.html" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="support.html" data-i18n="nav.support">Supporto</a></li>
+        </ul>
+      </details>
     </div>
   </header>
+
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="claim">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <div class="hero-grid">
-          <div class="hero-copy">
-            <div class="hero-brand">
-              <img class="hero-mark" src="assets/img/mark-256.png" alt="" width="88" height="88">
-              <span class="hero-name">Send<b>Song</b></span>
-            </div>
-            <h1 class="claim" id="claim"><span data-l="it" lang="it">Tu scegli il brano. <em>Il palco lo vede.</em></span><span data-l="en" lang="en">You pick the song. <em>The stage sees it.</em></span></h1>
-            <p class="sub" data-l="it" lang="it"><strong>Monitor gratis per tutta la band</strong> — titoli, brano attuale, prossimo e scaletta senza limiti. Un telefono o tablet fa da Master: scegli il brano e ogni leggio si aggiorna via Wi‑Fi locale o Bluetooth. Niente account, niente cloud.</p>
-            <p class="sub" data-l="en" lang="en"><strong>Free Monitor for the whole band</strong> — titles, current and next song, and setlist with no limits. One phone or tablet is the Master: pick the song and every stand updates over local Wi‑Fi or Bluetooth. No account, no cloud.</p>
-            <div class="stores">
-              <span class="store soon" role="note"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small><span data-l="it" lang="it">In arrivo</span><span data-l="en" lang="en">Coming soon</span></small><b>App Store</b></span></span>
-              <span class="store soon" role="note"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00A0FF" d="M3.6 2.3 13.3 12 3.6 21.7c-.4-.3-.6-.8-.6-1.4V3.7c0-.6.2-1.1.6-1.4z"/><path fill="#00E27A" d="M3.6 2.3c.4-.3 1-.4 1.6-.1l11.1 6.8-3 3z"/><path fill="#FF3A44" d="M3.6 21.7c.4.3 1 .4 1.6.1l11.1-6.8-3-3z"/><path fill="#FFD400" d="m16.3 9 3.9 2.3c.9.5.9 1.9 0 2.4L16.3 15l-3-3z"/></svg><span><small><span data-l="it" lang="it">In arrivo</span><span data-l="en" lang="en">Coming soon</span></small><b>Google Play</b></span></span>
+    <section class="hero stage-spot" id="top" aria-labelledby="claim">
+      <div class="hero-content w-full max-w-7xl items-center px-5 py-12 lg:px-8 lg:py-14">
+        <div class="grid w-full items-center gap-12 lg:grid-cols-2 lg:gap-8">
+          <div class="max-w-xl">
+            <h1 id="claim" class="text-[2.65rem] font-extrabold leading-[0.92] tracking-[-0.03em] text-balance sm:text-6xl lg:text-[4.5rem]" data-i18n="hero.title" data-i18n-html>Tu scegli il brano. <span class="text-primary">Il palco lo vede.</span></h1>
+            <p class="mt-6 max-w-[68ch] text-lg leading-relaxed text-base-content/80" data-i18n="hero.sub" data-i18n-html><strong class="text-base-content">Monitor gratis per tutta la band</strong> — titoli, brano attuale, prossimo e scaletta senza limiti. Un telefono o tablet fa da Master: scegli il brano e ogni leggio si aggiorna via Wi‑Fi locale o Bluetooth. Niente account, niente cloud.</p>
+            <div id="download" class="stores">
+              <a class="store" href="https://apps.apple.com/app/id6830770050" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="#fff"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg><span><small data-i18n="store.apple">Scarica su</small><b>App Store</b></span></a>
+              <a class="store" href="https://play.google.com/store/apps/details?id=it.steniku.sendsong" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00A0FF" d="M3.6 2.3 13.3 12 3.6 21.7c-.4-.3-.6-.8-.6-1.4V3.7c0-.6.2-1.1.6-1.4z"/><path fill="#00E27A" d="M3.6 2.3c.4-.3 1-.4 1.6-.1l11.1 6.8-3 3z"/><path fill="#FF3A44" d="M3.6 21.7c.4.3 1 .4 1.6.1l11.1-6.8-3-3z"/><path fill="#FFD400" d="m16.3 9 3.9 2.3c.9.5.9 1.9 0 2.4L16.3 15l-3-3z"/></svg><span><small data-i18n="store.play">Disponibile su</small><b>Google Play</b></span></a>
             </div>
           </div>
+
           <div class="hero-stage" aria-hidden="true">
             <div class="promo" id="promo">
               <div class="promo-tablet">
@@ -94,11 +112,11 @@
                 </g>
               </svg>
               <div class="promo-phone promo-pdf">
-                <span class="promo-pill"><span data-l="it" lang="it">MONITOR 01 · PDF</span><span data-l="en" lang="en">MONITOR 01 · PDF</span></span>
+                <span class="promo-pill" data-i18n="hero.mon1">MONITOR 01 · PDF</span>
                 <div class="promo-shell"><img src="assets/img/screens/monitor-sheet.it.png" data-shot="monitor-sheet" alt=""></div>
               </div>
               <div class="promo-phone promo-song">
-                <span class="promo-pill"><span data-l="it" lang="it">MONITOR 02 · BRANO</span><span data-l="en" lang="en">MONITOR 02 · SONG</span></span>
+                <span class="promo-pill" data-i18n="hero.mon2">MONITOR 02 · BRANO</span>
                 <div class="promo-shell"><img src="assets/img/screens/monitor-song.it.png" data-shot="monitor-song" alt=""></div>
               </div>
             </div>
@@ -107,195 +125,300 @@
       </div>
     </section>
 
-    <section id="funziona" aria-labelledby="h-fn">
-      <div class="wrap">
-        <h2 id="h-fn"><span data-l="it" lang="it">Come funziona</span><span data-l="en" lang="en">How it works</span></h2>
-        <p class="lead" data-l="it" lang="it">Tre passi dal camerino al palco. Stesso flusso su iPhone, iPad e Android.</p>
-        <p class="lead" data-l="en" lang="en">Three steps from the dressing room to the stage. Same flow on iPhone, iPad and Android.</p>
-        <ol class="steps">
-          <li class="step">
-            <span class="step-num">01</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 18h6"/></svg>
-            <h3><span data-l="it" lang="it">Scegli i ruoli</span><span data-l="en" lang="en">Pick your roles</span></h3>
-            <p data-l="it" lang="it">Su un dispositivo imposti <strong>Master</strong> (brani e playlist), sugli altri <strong>Monitor</strong> (leggio sul palco).</p>
-            <p data-l="en" lang="en">Set one device as <strong>Master</strong> (library and setlists), the others as <strong>Monitor</strong> (music stand on stage).</p>
-          </li>
-          <li class="step">
-            <span class="step-num">02</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 12h8M12 8v8"/><circle cx="12" cy="12" r="9"/></svg>
-            <h3><span data-l="it" lang="it">Abbina con il codice</span><span data-l="en" lang="en">Pair with the code</span></h3>
-            <p data-l="it" lang="it">Stesso trasporto su tutti (Bluetooth o Wi‑Fi locale). Ogni Monitor inserisce il codice a 6 cifre del Master in Impostazioni › Connessione.</p>
-            <p data-l="en" lang="en">Same transport on every device (Bluetooth or local Wi‑Fi). Each Monitor enters the Master’s 6-digit code under Settings › Connection.</p>
-          </li>
-          <li class="step">
-            <span class="step-num">03</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6v12M8 4v16M12 8v8M16 6v12M20 10v4"/></svg>
-            <h3><span data-l="it" lang="it">Tocca e vai</span><span data-l="en" lang="en">Tap and go</span></h3>
-            <p data-l="it" lang="it">Un tocco sul Master invia il brano a tutti i Monitor: titolo enorme, prossimo brano, modalità chiara o scura, o PDF a tutto schermo.</p>
-            <p data-l="en" lang="en">One tap on the Master sends the song to every Monitor: huge title, next song, light or dark stage mode, or full-screen PDF.</p>
-          </li>
-        </ol>
+    <section id="funziona" class="bg-base-100 px-5 py-20 lg:px-8 lg:py-28" aria-labelledby="h-fn">
+      <div class="mx-auto max-w-7xl">
+        <h2 id="h-fn" class="max-w-[16ch] text-4xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-5xl" data-i18n="how.title">Come funziona</h2>
+        <p class="mt-4 max-w-[68ch] text-lg text-base-content/75" data-i18n="how.lead">Tre passi dal camerino al palco. Stesso flusso su iPhone, iPad e Android.</p>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="card card-border h-full bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-2xl" data-i18n="how.1.title">Scegli i ruoli</h3>
+              <p class="text-base-content/80" data-i18n="how.1.body" data-i18n-html>Su un dispositivo imposti <strong>Master</strong> (brani e playlist), sugli altri <strong>Monitor</strong> (leggio sul palco).</p>
+            </div>
+            <figure class="bg-base-200 px-6 pb-6">
+              <div class="bezel w-full max-w-[220px]">
+                <img src="assets/img/screens/master-list.it.png" data-shot="master-list" data-i18n-alt="alt.how.1" alt="Lista brani sul Master" width="400" height="867" loading="lazy">
+              </div>
+            </figure>
+          </article>
+          <article class="card card-border h-full bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-2xl" data-i18n="how.2.title">Abbina con il codice</h3>
+              <p class="text-base-content/80" data-i18n="how.2.body" data-i18n-html>Stesso trasporto su tutti (Bluetooth o Wi‑Fi locale). Ogni Monitor inserisce il codice a 6 cifre del Master in Impostazioni › Connessione.</p>
+            </div>
+            <figure class="bg-base-200 px-6 pb-6">
+              <div class="bezel w-full max-w-[220px]">
+                <img src="assets/img/screens/monitor-pair.it.png" data-shot="monitor-pair" data-i18n-alt="alt.how.2" alt="Schermata abbinamento codice Master" width="400" height="867" loading="lazy">
+              </div>
+            </figure>
+          </article>
+          <article class="card card-border h-full bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-2xl" data-i18n="how.3.title">Tocca e vai</h3>
+              <p class="text-base-content/80" data-i18n="how.3.body" data-i18n-html>Un tocco sul Master invia il brano a tutti i Monitor: titolo enorme, prossimo brano, modalità chiara o scura, o PDF a tutto schermo.</p>
+            </div>
+            <figure class="bg-base-200 px-6 pb-6">
+              <div class="bezel w-full max-w-[220px]">
+                <img src="assets/img/screens/monitor-song.it.png" data-shot="monitor-song" data-i18n-alt="alt.how.3" alt="Monitor con brano attuale ORA e prossimo" width="400" height="867" loading="lazy">
+              </div>
+            </figure>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="screenshot" aria-labelledby="h-sc">
-      <div class="wrap">
-        <h2 id="h-sc"><span data-l="it" lang="it">Sul palco</span><span data-l="en" lang="en">On stage</span></h2>
-        <p class="shots-lead" data-l="it" lang="it">Il Master può mostrare il testo e il Monitor lo spartito, o il contrario. Ognuno tiene il proprio PDF e lo annota solo sul suo dispositivo.</p>
-        <p class="shots-lead" data-l="en" lang="en">The Master can show the lyrics and the Monitor the chart, or the other way round. Each one keeps its own PDF and annotates it only on that device.</p>
-        <p class="shots-hint" aria-hidden="true"><span data-l="it" lang="it">Scorri →</span><span data-l="en" lang="en">Swipe →</span></p>
-        <div class="shots-scroll">
-        <ul class="shots">
-          <li><figure>
-            <div class="device phone" role="img" data-alt-it="Monitor con brano attuale ORA e prossimo" data-alt-en="Monitor showing current song NOW and next"><div class="screen"><img src="assets/img/screens/monitor-song.it.png" data-shot="monitor-song" alt="" loading="lazy" width="400" height="867"></div></div>
-            <figcaption><span data-l="it" lang="it">ORA e PROSSIMO</span><span data-l="en" lang="en">NOW and NEXT</span></figcaption>
-          </figure></li>
-          <li><figure>
-            <div class="device phone" role="img" data-alt-it="Spartito PDF sul Monitor" data-alt-en="PDF chart on the Monitor"><div class="screen"><img src="assets/img/screens/monitor-sheet.it.png" data-shot="monitor-sheet" alt="" loading="lazy" width="400" height="867"></div></div>
-            <figcaption><span data-l="it" lang="it">Spartito PDF</span><span data-l="en" lang="en">PDF chart</span></figcaption>
-          </figure></li>
-          <li><figure>
-            <div class="device phone" role="img" data-alt-it="Schermata abbinamento codice Master" data-alt-en="Master pairing code screen"><div class="screen"><img src="assets/img/screens/monitor-pair.it.png" data-shot="monitor-pair" alt="" loading="lazy" width="400" height="867"></div></div>
-            <figcaption><span data-l="it" lang="it">Abbinamento sicuro</span><span data-l="en" lang="en">Secure pairing</span></figcaption>
-          </figure></li>
-          <li><figure>
-            <div class="device phone" role="img" data-alt-it="Lista brani sul Master" data-alt-en="Song list on the Master"><div class="screen"><img src="assets/img/screens/master-list.it.png" data-shot="master-list" alt="" loading="lazy" width="400" height="867"></div></div>
-            <figcaption><span data-l="it" lang="it">Playlist sul Master</span><span data-l="en" lang="en">Playlist on Master</span></figcaption>
-          </figure></li>
-          <li class="wide"><figure>
-            <div class="device tablet" role="img" data-alt-it="Master su tablet con i brani" data-alt-en="Master on tablet with library"><div class="screen"><img src="assets/img/screens/master-tablet.it.png" data-shot="master-tablet" alt="" loading="lazy" width="800" height="600"></div></div>
-            <figcaption><span data-l="it" lang="it">Master da tablet</span><span data-l="en" lang="en">Master on tablet</span></figcaption>
-          </figure></li>
-          <li class="wide"><figure>
-            <div class="device tablet" role="img" data-alt-it="Monitor in modalità chiara da palco" data-alt-en="Monitor in light stage mode"><div class="screen"><img src="assets/img/screens/monitor-light.it.png" data-shot="monitor-light" alt="" loading="lazy" width="800" height="600"></div></div>
-            <figcaption><span data-l="it" lang="it">Leggio chiaro o scuro</span><span data-l="en" lang="en">Light or dark stand</span></figcaption>
-          </figure></li>
-          <li class="wide"><figure>
-            <div class="device tablet" role="img" data-alt-it="Master su tablet con il testo del brano" data-alt-en="Master on tablet with the song lyrics"><div class="screen"><img src="assets/img/screens/master-text.it.png" data-shot="master-text" alt="" loading="lazy" width="800" height="600"></div></div>
-            <figcaption><span data-l="it" lang="it">Master, testo</span><span data-l="en" lang="en">Master, lyrics</span></figcaption>
-          </figure></li>
-          <li class="wide"><figure>
-            <div class="device tablet" role="img" data-alt-it="Monitor con lo spartito al posto del titolo" data-alt-en="Monitor with the chart instead of the title"><div class="screen"><img src="assets/img/screens/monitor-chart.it.png" data-shot="monitor-chart" alt="" loading="lazy" width="800" height="600"></div></div>
-            <figcaption><span data-l="it" lang="it">Leggio, spartito</span><span data-l="en" lang="en">Stand, chart</span></figcaption>
-          </figure></li>
+    <section id="screenshot" class="border-y border-base-300 bg-base-200 px-5 py-20 lg:px-8 lg:py-28" aria-labelledby="h-sc">
+      <div class="mx-auto max-w-7xl">
+        <h2 id="h-sc" class="text-4xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-5xl" data-i18n="stage.title">Sul palco</h2>
+        <p class="mt-4 w-full text-lg text-base-content/75" data-i18n="stage.lead">Il Master può mostrare il testo e il Monitor lo spartito, o il contrario. Ognuno tiene il proprio PDF e lo annota solo sul suo dispositivo.</p>
+        <p class="mt-6 text-sm font-bold uppercase tracking-[0.08em] text-accent lg:hidden" data-i18n="stage.hint">Scorri</p>
+        <ul class="mt-8 flex snap-x gap-8 overflow-x-auto pb-4">
+          <li class="w-44 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/monitor-song.it.png" data-shot="monitor-song" data-i18n-alt="alt.now" alt="Monitor con brano attuale ORA e prossimo" width="400" height="867" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.now">ORA e PROSSIMO</figcaption>
+            </figure>
+          </li>
+          <li class="w-44 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/monitor-sheet.it.png" data-shot="monitor-sheet" data-i18n-alt="alt.sheet" alt="Spartito PDF sul Monitor" width="400" height="867" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.sheet">Spartito PDF</figcaption>
+            </figure>
+          </li>
+          <li class="w-44 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/monitor-pair.it.png" data-shot="monitor-pair" data-i18n-alt="alt.pair" alt="Schermata abbinamento codice Master" width="400" height="867" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.pair">Abbinamento sicuro</figcaption>
+            </figure>
+          </li>
+          <li class="w-44 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/master-list.it.png" data-shot="master-list" data-i18n-alt="alt.list" alt="Lista brani sul Master" width="400" height="867" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.list">Playlist sul Master</figcaption>
+            </figure>
+          </li>
+          <li class="w-80 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/master-tablet.it.png" data-shot="master-tablet" data-i18n-alt="alt.tablet" alt="Master su tablet con i brani" width="800" height="600" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.tablet">Master da tablet</figcaption>
+            </figure>
+          </li>
+          <li class="w-80 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/monitor-light.it.png" data-shot="monitor-light" data-i18n-alt="alt.light" alt="Monitor in modalità chiara da palco" width="800" height="600" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.light">Leggio chiaro o scuro</figcaption>
+            </figure>
+          </li>
+          <li class="w-80 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/master-text.it.png" data-shot="master-text" data-i18n-alt="alt.lyrics" alt="Master su tablet con il testo del brano" width="800" height="600" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.lyrics">Master, testo</figcaption>
+            </figure>
+          </li>
+          <li class="w-80 shrink-0 snap-start">
+            <figure>
+              <div class="bezel"><img src="assets/img/screens/monitor-chart.it.png" data-shot="monitor-chart" data-i18n-alt="alt.chart" alt="Monitor con lo spartito al posto del titolo" width="800" height="600" loading="lazy"></div>
+              <figcaption class="mt-3 text-center font-bold" data-i18n="cap.chart">Leggio, spartito</figcaption>
+            </figure>
+          </li>
         </ul>
-        </div>
       </div>
     </section>
 
-    <section id="features" aria-labelledby="h-ft">
-      <div class="wrap">
-        <h2 id="h-ft"><span data-l="it" lang="it">Fatto per il live</span><span data-l="en" lang="en">Built for live</span></h2>
-        <div class="feats">
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5a7 7 0 0 1 14 0"/><path d="M8 12.5V9a4 4 0 0 1 8 0v3.5"/><path d="M12 16v2"/></svg><h3><span data-l="it" lang="it">Senza internet</span><span data-l="en" lang="en">No internet needed</span></h3><p data-l="it" lang="it">Wi‑Fi locale o Bluetooth BLE: i device parlano direttamente, senza server nostri.</p><p data-l="en" lang="en">Local Wi‑Fi or BLE Bluetooth: devices talk directly, with no servers on our side.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M9 8h6M9 12h6"/></svg><h3><span data-l="it" lang="it">Spartito o testo</span><span data-l="en" lang="en">Chart or lyrics</span></h3><p data-l="it" lang="it">Master e Monitor tengono ognuno il proprio PDF e lo annotano sul posto. Sul leggio, pagina con tap o pedale e inversione colori.</p><p data-l="en" lang="en">Master and Monitor each keep their own PDF and annotate it on that device. On the stand, page turns by tap or pedal, and colour invert.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 12h2M15 12h2"/></svg><h3><span data-l="it" lang="it">Pedale e tastiera</span><span data-l="en" lang="en">Pedal and keyboard</span></h3><p data-l="it" lang="it">Frecce, Page Up/Down, Spazio e Invio per voltare pagina durante lo spartito.</p><p data-l="en" lang="en">Arrow keys, Page Up/Down, Space and Enter to turn pages while reading.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2"/></svg><h3><span data-l="it" lang="it">Chiaro / scuro</span><span data-l="en" lang="en">Light / dark</span></h3><p data-l="it" lang="it">Modalità palco scura o chiara sul Monitor, alta leggibilità a distanza.</p><p data-l="en" lang="en">Dark or light stage mode on the Monitor, readable from a distance.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h14"/></svg><h3><span data-l="it" lang="it">Playlist</span><span data-l="en" lang="en">Playlists</span></h3><p data-l="it" lang="it">Salva, riordina, condividi ai Monitor collegati, esporta in PDF.</p><p data-l="en" lang="en">Save, reorder, push to connected Monitors, export as PDF.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 5-3.5 8-8 8s-8-3-8-8V7z"/></svg><h3><span data-l="it" lang="it">Codice Master</span><span data-l="en" lang="en">Master code</span></h3><p data-l="it" lang="it">Ogni Monitor ascolta solo il suo Master. Nuovo codice = riconnetti i Monitor.</p><p data-l="en" lang="en">Each Monitor only listens to its Master. A new code means Monitors must reconnect.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="9" height="14" rx="2"/><rect x="13" y="7" width="9" height="12" rx="2"/></svg><h3><span data-l="it" lang="it">iOS + Android</span><span data-l="en" lang="en">iOS + Android</span></h3><p data-l="it" lang="it">Master e Monitor misti: iPhone, iPad e tablet Android insieme.</p><p data-l="en" lang="en">Mixed Master and Monitors: iPhone, iPad and Android tablets together.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M5 8l2 2M17 14l2 2M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg><h3><span data-l="it" lang="it">Backup locali</span><span data-l="en" lang="en">Local backups</span></h3><p data-l="it" lang="it">Brani, playlist e impostazioni: backup e ripristino sul dispositivo.</p><p data-l="en" lang="en">Library, setlists and settings: backup and restore on your device.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h18M7 11V7a5 5 0 0 1 10 0v4"/></svg><h3><span data-l="it" lang="it">Nessun account</span><span data-l="en" lang="en">No account</span></h3><p data-l="it" lang="it">Niente registrazione, niente analytics: i tuoi brani restano tuoi.</p><p data-l="en" lang="en">No sign-up, no analytics: your songs stay yours.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 17h7"/><path d="M16 13v4"/></svg><h3><span data-l="it" lang="it">Repertori multipli</span><span data-l="en" lang="en">Multiple repertoires</span></h3><p data-l="it" lang="it">Sul Master più librerie con brani, playlist e cartella PDF ciascuna; passa con un chip in cima alla lista. Invia un repertorio a un altro Master sulla stessa rete: Unisci, sostituisci (con backup) o nuovo repertorio.</p><p data-l="en" lang="en">On the Master, several libraries each with songs, playlists and a PDF folder; switch with a chip at the top of the list. Send a repertoire to another Master on the same network: merge, replace (with backup) or new repertoire.</p></div>
-          <div class="feat"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h3M14 15h3M7 11h10"/><circle cx="8.5" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="15.5" cy="11" r="1.2" fill="currentColor" stroke="none"/><path d="M18 19v2M6 19v2"/></svg><h3><span data-l="it" lang="it">Effetti MIDI</span><span data-l="en" lang="en">MIDI effects</span></h3><p data-l="it" lang="it">Sul Master, il pulsante Effetti in basso a sinistra accende gli effetti sul processore via Bluetooth MIDI (CC), anche VoiceLive 3 Extreme con adattatore BLE.</p><p data-l="en" lang="en">On the Master, the FX button at the bottom left toggles effects on your processor over Bluetooth MIDI (CC), including VoiceLive 3 Extreme with a BLE adapter.</p></div>
-        </div>
+    <section id="features" class="px-5 py-20 lg:px-8 lg:py-28" aria-labelledby="h-ft">
+      <div class="mx-auto max-w-7xl">
+        <h2 id="h-ft" class="text-4xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-5xl" data-i18n="live.title">Fatto per il live</h2>
+        <ul class="mt-12 grid gap-x-12 md:grid-cols-2">
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5a7 7 0 0 1 14 0"/><path d="M8 12.5V9a4 4 0 0 1 8 0v3.5"/><path d="M12 16v2"/></svg><span data-i18n="f1.title">Senza internet</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f1.body">Wi‑Fi locale o Bluetooth BLE: i device parlano direttamente, senza server nostri.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M9 8h6M9 12h6"/></svg><span data-i18n="f2.title">Spartito o testo</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f2.body">Master e Monitor tengono ognuno il proprio PDF e lo annotano sul posto. Sul leggio, pagina con tap o pedale e inversione colori.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="10" rx="2"/><path d="M7 12h2M15 12h2"/></svg><span data-i18n="f3.title">Pedale e tastiera</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f3.body">Frecce, Page Up/Down, Spazio e Invio per voltare pagina durante lo spartito.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2"/></svg><span data-i18n="f4.title">Chiaro / scuro</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f4.body">Modalità palco scura o chiara sul Monitor, alta leggibilità a distanza.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h14"/></svg><span data-i18n="f5.title">Playlist</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f5.body">Salva, riordina, condividi ai Monitor collegati, esporta in PDF.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4v6c0 5-3.5 8-8 8s-8-3-8-8V7z"/></svg><span data-i18n="f6.title">Codice Master</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f6.body">Ogni Monitor ascolta solo il suo Master. Nuovo codice = riconnetti i Monitor.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="9" height="14" rx="2"/><rect x="13" y="7" width="9" height="12" rx="2"/></svg><span data-i18n="f7.title">iOS + Android</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f7.body">Master e Monitor misti: iPhone, iPad e tablet Android insieme.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M5 8l2 2M17 14l2 2M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/></svg><span data-i18n="f8.title">Backup locali</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f8.body">Brani, playlist e impostazioni: backup e ripristino sul dispositivo.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h18M7 11V7a5 5 0 0 1 10 0v4"/></svg><span data-i18n="f9.title">Nessun account</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f9.body">Niente registrazione, niente analytics: i tuoi brani restano tuoi.</p>
+          </li>
+          <li class="border-b border-base-300 py-5">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 17h7"/><path d="M16 13v4"/></svg><span data-i18n="f10.title">Repertori multipli</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f10.body">Sul Master più librerie con brani, playlist e cartella PDF ciascuna; passa con un chip in cima alla lista. Invia un repertorio a un altro Master sulla stessa rete: Unisci, sostituisci (con backup) o nuovo repertorio.</p>
+          </li>
+          <li class="border-b border-base-300 py-5 md:col-span-2">
+            <h3 class="flex items-center gap-3 text-xl font-bold"><svg class="icon text-primary" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 15h3M14 15h3M7 11h10"/><circle cx="8.5" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="15.5" cy="11" r="1.2" fill="currentColor" stroke="none"/><path d="M18 19v2M6 19v2"/></svg><span data-i18n="f11.title">Effetti MIDI</span></h3>
+            <p class="mt-2 max-w-[68ch] text-base-content/75" data-i18n="f11.body">Sul Master, il pulsante Effetti in basso a sinistra accende gli effetti sul processore via Bluetooth MIDI (CC), anche VoiceLive 3 Extreme con adattatore BLE.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section id="piani" aria-labelledby="h-pl">
-      <div class="wrap">
-        <h2 id="h-pl"><span data-l="it" lang="it">Piani</span><span data-l="en" lang="en">Plans</span></h2>
-        <p class="lead" data-l="it" lang="it">Prezzi e rinnovi li gestiscono App Store e Google Play.<br>Qui trovi cosa include ogni piano.</p>
-        <p class="lead" data-l="en" lang="en">Pricing and renewals are handled by the App Store and Google Play.<br>Here is what each plan includes.</p>
-        <div class="plans">
-          <article class="plan">
-            <span class="plan-tag"><span data-l="it" lang="it">Gratis</span><span data-l="en" lang="en">Free</span></span>
-            <h3><span data-l="it" lang="it">Per iniziare</span><span data-l="en" lang="en">Get started</span></h3>
-            <p class="tagline" data-l="it" lang="it">Master con limiti, Monitor gratis per la band</p>
-            <p class="tagline" data-l="en" lang="en">Master with limits, Monitor free for the band</p>
-            <ul>
-              <li data-l="it" lang="it">1 repertorio, fino a 5 brani attivi sul Master (1 Monitor collegato)</li>
-              <li data-l="en" lang="en">1 repertoire, up to 5 active songs on the Master (1 linked Monitor)</li>
-              <li data-l="it" lang="it">Monitor: ORA, PROSSIMO e scaletta — gratis per sempre</li>
-              <li data-l="en" lang="en">Monitor: NOW, NEXT and setlist — free forever</li>
-              <li data-l="it" lang="it">Fino a 5 spartiti PDF sul Monitor (pedale e colori invertiti inclusi)</li>
-              <li data-l="en" lang="en">Up to 5 PDF charts on the Monitor (pedal and invert included)</li>
-              <li data-l="it" lang="it">Effetti MIDI spenti sul Master gratis</li>
-              <li data-l="en" lang="en">MIDI effects off on the free Master plan</li>
-            </ul>
-          </article>
-          <article class="plan">
-            <span class="plan-tag"><span data-l="it" lang="it">PDF Monitor</span><span data-l="en" lang="en">PDF Monitor</span></span>
-            <h3><span data-l="it" lang="it">PDF Monitor</span><span data-l="en" lang="en">PDF Monitor</span></h3>
-            <p class="tagline" data-l="it" lang="it">Leggio con libreria PDF completa</p>
-            <p class="tagline" data-l="en" lang="en">Stand with a full PDF library</p>
-            <ul>
-              <li data-l="it" lang="it">Spartiti PDF illimitati sul Monitor</li>
-              <li data-l="en" lang="en">Unlimited PDF charts on the Monitor</li>
-              <li data-l="it" lang="it">Cartella collegata con abbinamento automatico</li>
-              <li data-l="en" lang="en">Linked folder with automatic matching</li>
-              <li data-l="it" lang="it">Annotazioni sullo spartito</li>
-              <li data-l="en" lang="en">Chart annotations</li>
-              <li data-l="it" lang="it">Titoli e scaletta restano sempre gratis</li>
-              <li data-l="en" lang="en">Titles and setlist stay free forever</li>
-            </ul>
-          </article>
-          <article class="plan">
-            <span class="plan-tag">Pro</span>
-            <h3>Pro</h3>
-            <p class="tagline" data-l="it" lang="it">Per chi guida lo spettacolo</p>
-            <p class="tagline" data-l="en" lang="en">For whoever runs the show</p>
-            <ul>
-              <li data-l="it" lang="it">Brani e Monitor illimitati sul Master</li>
-              <li data-l="en" lang="en">Unlimited songs and Monitors on the Master</li>
-              <li data-l="it" lang="it">Repertori multipli (brani, playlist e PDF ciascuno)</li>
-              <li data-l="en" lang="en">Multiple repertoires (songs, playlists and PDF each)</li>
-              <li data-l="it" lang="it">Importa e invia repertori completi</li>
-              <li data-l="en" lang="en">Import and send whole repertoires</li>
-              <li data-l="it" lang="it">Effetti MIDI inclusi sul Master</li>
-              <li data-l="en" lang="en">MIDI effects included on the Master</li>
-            </ul>
-          </article>
-          <article class="plan">
-            <span class="plan-tag">Full</span>
-            <h3>Full</h3>
-            <p class="tagline" data-l="it" lang="it">Pro e PDF Monitor insieme</p>
-            <p class="tagline" data-l="en" lang="en">Pro and PDF Monitor together</p>
-            <ul>
-              <li data-l="it" lang="it">Tutto di Pro più PDF Monitor illimitato</li>
-              <li data-l="en" lang="en">Everything in Pro plus unlimited PDF Monitor</li>
-              <li data-l="it" lang="it">Un account store su tutti i tuoi device (Ripristina acquisti)</li>
-              <li data-l="en" lang="en">One store account on all your devices (Restore purchases)</li>
-              <li data-l="it" lang="it">Disponibile anche a vita — Full per sempre</li>
-              <li data-l="en" lang="en">Also available for life — Full for life</li>
-            </ul>
-          </article>
+    <section id="piani" class="bg-base-200 px-5 py-20 lg:px-8 lg:py-28" aria-labelledby="h-pl">
+      <div class="mx-auto max-w-7xl">
+        <h2 id="h-pl" class="text-4xl font-extrabold leading-[0.95] tracking-[-0.03em] sm:text-5xl" data-i18n="plans.title">Piani</h2>
+        <p class="plans-lead mt-4 w-full text-lg text-base-content/75" data-i18n="plans.lead" data-i18n-html>Prezzi e rinnovi li gestiscono App Store e Google Play.<br>Qui trovi cosa include ogni piano.</p>
+        <p class="plan-legend" data-i18n="plans.cmp.legend">In fucsia, quello che il piano aggiunge rispetto alla colonna a sinistra.</p>
+        <p class="plan-scroll-hint" data-i18n="plans.cmp.scroll">Scorri di lato per confrontare</p>
+        <div class="plan-scroll">
+          <table class="plan-compare">
+            <caption class="sr-only" data-i18n="plans.cmp.cap">Confronto dei piani SendSong</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only" data-i18n="plans.cmp.feature">Funzione</span></th>
+                <th scope="col">
+                  <span class="plan-name" data-i18n="plans.free.tag">Gratis</span>
+                  <span class="plan-more" data-i18n="plans.cmp.base">La base</span>
+                </th>
+                <th scope="col">
+                  <span class="plan-name">PDF Monitor</span>
+                  <span class="plan-more" data-i18n="plans.cmp.more.pdf">In più sul Monitor</span>
+                </th>
+                <th scope="col">
+                  <span class="plan-name">Pro</span>
+                  <span class="plan-more" data-i18n="plans.cmp.more.pro">In più sul Master</span>
+                </th>
+                <th scope="col" class="is-full">
+                  <span class="plan-kicker" data-i18n="plans.full.badge">Consigliato</span>
+                  <span class="plan-name">Full</span>
+                  <span class="plan-more" data-i18n="plans.cmp.more.full">Pro + PDF Monitor</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="plan-group"><th colspan="5" scope="colgroup" data-i18n="plans.cmp.g.mon">Sul Monitor</th></tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.titles">Titoli, brano attuale, prossimo e scaletta</th>
+                <td data-i18n="plans.cmp.always">Sempre</td>
+                <td data-i18n="plans.cmp.always">Sempre</td>
+                <td data-i18n="plans.cmp.always">Sempre</td>
+                <td class="is-full" data-i18n="plans.cmp.always">Sempre</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.pdfs">Spartiti PDF</th>
+                <td>5</td>
+                <td class="is-plus" data-i18n="plans.cmp.unl">Illimitati</td>
+                <td>5</td>
+                <td class="is-full is-plus" data-i18n="plans.cmp.unl">Illimitati</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.folder">Cartella collegata</th>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-plus" data-i18n="plans.cmp.yes">Sì</td>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-full is-plus" data-i18n="plans.cmp.yes">Sì</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.notes">Annotazioni sullo spartito</th>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-plus" data-i18n="plans.cmp.yes">Sì</td>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-full is-plus" data-i18n="plans.cmp.yes">Sì</td>
+              </tr>
+              <tr class="plan-group"><th colspan="5" scope="colgroup" data-i18n="plans.cmp.g.mas">Sul Master</th></tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.songs">Brani attivi</th>
+                <td>5</td>
+                <td>5</td>
+                <td class="is-plus" data-i18n="plans.cmp.unl">Illimitati</td>
+                <td class="is-full" data-i18n="plans.cmp.unl">Illimitati</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.mons">Monitor collegati</th>
+                <td>1</td>
+                <td>1</td>
+                <td class="is-plus" data-i18n="plans.cmp.unl">Illimitati</td>
+                <td class="is-full" data-i18n="plans.cmp.unl">Illimitati</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.reps">Repertori</th>
+                <td>1</td>
+                <td>1</td>
+                <td class="is-plus" data-i18n="plans.cmp.multi">Multipli</td>
+                <td class="is-full" data-i18n="plans.cmp.multi">Multipli</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.send">Importa e invia repertori</th>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-plus" data-i18n="plans.cmp.yes">Sì</td>
+                <td class="is-full" data-i18n="plans.cmp.yes">Sì</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.midi">Effetti MIDI</th>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-plus" data-i18n="plans.cmp.yes">Sì</td>
+                <td class="is-full" data-i18n="plans.cmp.yes">Sì</td>
+              </tr>
+              <tr>
+                <th scope="row" data-i18n="plans.cmp.life">Anche a vita</th>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-no" data-i18n="plans.cmp.no">No</td>
+                <td class="is-full is-plus" data-i18n="plans.cmp.opt">Opzione</td>
+              </tr>
+              <tr class="plan-cta">
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="is-full"><a class="btn btn-primary btn-sm" href="#download" data-i18n="plans.full.cta">Scarica sugli store</a></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <aside class="notice" aria-label="Note">
-          <strong><span data-l="it" lang="it">Prova Pro di 14 giorni</span><span data-l="en" lang="en">14-day Pro trial</span></strong>
-          <p data-l="it" lang="it">La prima volta che apri SendSong come Master parte una prova gratuita di 14 giorni con tutte le funzioni Pro: nessun account, nessuna carta. La data di inizio resta solo sul dispositivo. Dopo la prova torni al piano gratis: restano attivi 5 brani, 1 repertorio e 1 Monitor. Gli altri brani restano salvati ma bloccati, e gli Effetti MIDI si spengono, finché non passi a Pro.</p>
-          <p data-l="en" lang="en">The first time you open SendSong as a Master, a free 14-day trial unlocks every Pro feature: no account, no card. The start date stays on your device only. When it ends you return to the free plan: 5 songs, 1 repertoire and 1 Monitor stay active. The other songs stay saved but locked, and MIDI effects turn off, until you upgrade to Pro.</p>
-        </aside>
-        <div class="cta-block">
-          <p data-l="it" lang="it">Serve aiuto per collegare Master e Monitor? Leggi la <a href="guide.html">guida passo passo</a>.</p>
-          <p data-l="en" lang="en">Need help linking Master and Monitor? Read the <a href="guide.html">step-by-step guide</a>.</p>
+
+        <div class="alert alert-soft plans-note mt-10 w-full items-start" role="note">
+          <div>
+            <h3 class="font-extrabold" data-i18n="trial.title">Prova Pro di 14 giorni</h3>
+            <p class="mt-1 w-full text-base-content/80" data-i18n="trial.body">La prima volta che apri SendSong come Master parte una prova gratuita di 14 giorni con tutte le funzioni Pro: nessun account, nessuna carta. La data di inizio resta solo sul dispositivo. Dopo la prova torni al piano gratis: restano attivi 5 brani, 1 repertorio e 1 Monitor. Gli altri brani restano salvati ma bloccati, e gli Effetti MIDI si spengono, finché non passi a Pro.</p>
+          </div>
         </div>
+        <p class="plans-help mt-8 w-full text-lg" data-i18n="guide.cta" data-i18n-html>Serve aiuto per collegare Master e Monitor? Leggi la <a class="link link-primary" href="guide.html">guida passo passo</a>.</p>
       </div>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="foot-brand">
-        <img src="assets/img/mark-128.png" alt="SendSong" width="40" height="40">
-        <p><span data-l="it" lang="it">Realizzato da <a href="https://ritmodigitale.it/" rel="noopener">RitmoDigitale</a></span><span data-l="en" lang="en">Made by <a href="https://ritmodigitale.it/" rel="noopener">RitmoDigitale</a></span><br><a href="mailto:info@ritmodigitale.it">info@ritmodigitale.it</a> · © 2026</p>
-      </div>
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="guide.html"><span data-l="it" lang="it">Guida</span><span data-l="en" lang="en">Guide</span></a>
-        <a href="privacy.html">Privacy</a>
-        <a href="support.html"><span data-l="it" lang="it">Supporto</span><span data-l="en" lang="en">Support</span></a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener"><span data-l="it" lang="it">Termini d'uso</span><span data-l="en" lang="en">Terms of Use</span></a>
-      </nav>
+
+  <footer class="site-footer border-t border-base-300 bg-base-100 px-5 py-8 text-base-content lg:px-8">
+    <div class="flex items-center gap-3 text-left">
+      <img src="assets/img/mark-128.png" alt="SendSong" width="40" height="40">
+      <p><span data-i18n="footer.made" data-i18n-html>Realizzato da <a class="link link-hover" href="https://ritmodigitale.it/" rel="noopener">RitmoDigitale</a></span><br><a class="link link-hover" href="mailto:info@ritmodigitale.it">info@ritmodigitale.it</a> · © 2026</p>
     </div>
+    <nav aria-label="Footer">
+      <a class="link link-hover" href="guide.html" data-i18n="nav.guide">Guida</a>
+      <a class="link link-hover" href="privacy.html">Privacy</a>
+      <a class="link link-hover" href="support.html" data-i18n="nav.support">Supporto</a>
+      <a class="link link-hover" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener" data-i18n="footer.terms">Termini d'uso</a>
+    </nav>
   </footer>
+  <script>
+    if (window.sendsongApplyCopy) {
+      window.sendsongApplyCopy(document.documentElement.getAttribute('data-lang') || 'it');
+    }
+  </script>
 </body>
 </html>

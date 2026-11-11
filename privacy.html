@@ -1,36 +1,59 @@
 <!doctype html>
-<html lang="it">
+<html lang="it" data-theme="stage">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title data-en="Privacy · SendSong">Privacy · SendSong</title>
   <meta name="description" content="Informativa privacy SendSong: nessun account, nessun tracciamento, dati sul dispositivo." data-en="SendSong privacy notice: no account, no tracking, data on your device.">
-  <meta name="theme-color" content="#0E0F13" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#F5F5F7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07080C">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SendSong">
   <meta property="og:image" content="https://nikuniku74.github.io/sendsong-site/assets/img/icon.png">
   <link rel="icon" type="image/png" href="assets/img/icon-180.png">
   <link rel="apple-touch-icon" href="assets/img/icon-180.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Condensed:wght@400;700;800&display=swap">
-  <link rel="stylesheet" href="assets/style.css?v=12">
-  <script src="assets/site.js?v=12"></script>
+  <link rel="stylesheet" href="assets/style.css?v=13">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css">
+  <link rel="stylesheet" href="assets/landing.css?v=8">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="assets/i18n.js?v=4"></script>
+  <script src="assets/site.js?v=13"></script>
 </head>
-<body>
-  <a class="skip" href="#main"><span data-l="it" lang="it">Salta al contenuto</span><span data-l="en" lang="en">Skip to content</span></a>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand plain" href="index.html" aria-label="SendSong"><img src="assets/img/mark-128.png" alt="" width="40" height="40"><span class="brand-name">Send<b>Song</b></span></a>
-      <nav class="nav" aria-label="Menu">
-        <a href="guide.html"><span data-l="it" lang="it">Guida</span><span data-l="en" lang="en">Guide</span></a>
-        <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="support.html"><span data-l="it" lang="it">Supporto</span><span data-l="en" lang="en">Support</span></a>
-        <div class="lang" role="group" aria-label="Lingua / Language">
-          <button type="button" data-set-lang="it" aria-pressed="true" lang="it">IT</button><span aria-hidden="true">/</span><button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
-        </div>
-      </nav>
+<body class="bg-base-100 text-base-content antialiased">
+  <a class="skip btn btn-primary btn-sm" href="#main" data-i18n="skip">Salta al contenuto</a>
+  <header class="navbar sticky top-0 z-50 border-b border-base-300 bg-base-200 px-4 lg:px-8">
+    <div class="navbar-start">
+      <a href="index.html" class="flex items-center gap-2 text-lg font-extrabold tracking-tight">
+        <img src="assets/img/mark-64.png" alt="" width="32" height="32">
+        Send<span class="text-primary">Song</span>
+      </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="index.html#funziona" data-i18n="nav.how">Come funziona</a></li>
+        <li><a href="index.html#screenshot" data-i18n="nav.stage">Sul palco</a></li>
+        <li><a href="index.html#piani" data-i18n="nav.plans">Piani</a></li>
+        <li><a href="guide.html" data-i18n="nav.guide">Guida</a></li>
+        <li><a href="support.html" data-i18n="nav.support">Supporto</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end gap-2">
+      <div class="join" role="group" data-i18n-aria="nav.lang" aria-label="Lingua">
+        <button type="button" class="btn btn-sm join-item" data-set-lang="it" aria-pressed="true" lang="it">IT</button>
+        <button type="button" class="btn btn-sm join-item" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+      <details class="dropdown dropdown-end lg:hidden">
+        <summary class="btn btn-ghost btn-square" data-i18n-aria="nav.menu" aria-label="Menu">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </summary>
+        <ul class="dropdown-content menu z-20 mt-2 w-52 rounded-box bg-base-200 p-2 shadow">
+          <li><a href="index.html#funziona" data-i18n="nav.how">Come funziona</a></li>
+          <li><a href="index.html#screenshot" data-i18n="nav.stage">Sul palco</a></li>
+          <li><a href="index.html#piani" data-i18n="nav.plans">Piani</a></li>
+          <li><a href="guide.html" data-i18n="nav.guide">Guida</a></li>
+          <li><a href="privacy.html" aria-current="page" data-i18n="nav.privacy">Privacy</a></li>
+          <li><a href="support.html" data-i18n="nav.support">Supporto</a></li>
+        </ul>
+      </details>
     </div>
   </header>
   <main id="main" class="page">
@@ -150,20 +173,22 @@
       </article>
     </div>
   </main>
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="foot-brand">
-        <img src="assets/img/mark-128.png" alt="SendSong" width="40" height="40">
-        <p><span data-l="it" lang="it">Realizzato da <a href="https://ritmodigitale.it/" rel="noopener">RitmoDigitale</a></span><span data-l="en" lang="en">Made by <a href="https://ritmodigitale.it/" rel="noopener">RitmoDigitale</a></span><br><a href="mailto:info@ritmodigitale.it">info@ritmodigitale.it</a> · © 2026</p>
-      </div>
-      <nav class="foot-nav" aria-label="Footer">
-        <a href="index.html">Home</a>
-        <a href="guide.html"><span data-l="it" lang="it">Guida</span><span data-l="en" lang="en">Guide</span></a>
-        <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="support.html"><span data-l="it" lang="it">Supporto</span><span data-l="en" lang="en">Support</span></a>
-        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener"><span data-l="it" lang="it">Termini d'uso</span><span data-l="en" lang="en">Terms of Use</span></a>
-      </nav>
+  <footer class="site-footer border-t border-base-300 bg-base-100 px-5 py-8 text-base-content lg:px-8">
+    <div class="flex items-center gap-3 text-left">
+      <img src="assets/img/mark-128.png" alt="SendSong" width="40" height="40">
+      <p><span data-i18n="footer.made" data-i18n-html>Realizzato da <a class="link link-hover" href="https://ritmodigitale.it/" rel="noopener">RitmoDigitale</a></span><br><a class="link link-hover" href="mailto:info@ritmodigitale.it">info@ritmodigitale.it</a> · © 2026</p>
     </div>
+    <nav aria-label="Footer">
+      <a class="link link-hover" href="guide.html" data-i18n="nav.guide">Guida</a>
+      <a class="link link-hover" href="privacy.html" aria-current="page">Privacy</a>
+      <a class="link link-hover" href="support.html" data-i18n="nav.support">Supporto</a>
+      <a class="link link-hover" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener" data-i18n="footer.terms">Termini d'uso</a>
+    </nav>
   </footer>
+  <script>
+    if (window.sendsongApplyCopy) {
+      window.sendsongApplyCopy(document.documentElement.getAttribute('data-lang') || 'it');
+    }
+  </script>
 </body>
 </html>

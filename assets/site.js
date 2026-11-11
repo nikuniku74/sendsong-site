@@ -13,7 +13,9 @@
   function sset(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } }
 
   var th = params.get('theme');
-  if (th === 'dark' || th === 'light') root.setAttribute('data-theme', th);
+  if ((th === 'dark' || th === 'light') && root.getAttribute('data-theme') !== 'stage') {
+    root.setAttribute('data-theme', th);
+  }
 
   var lang = 'it';
   var storageOK = true;
@@ -69,6 +71,7 @@
     for (var a = 0; a < alts.length; a++) alts[a].setAttribute('aria-label', alts[a].getAttribute('data-alt-' + l));
     if (save) storageOK = sset(LANG_KEY, l);
     applyLinks();
+    if (typeof window.sendsongApplyCopy === 'function') window.sendsongApplyCopy(lang);
     if (heroRedraw) heroRedraw();
     if (window.sendsongRefreshSupport) window.sendsongRefreshSupport();
     if (window.sendsongRefreshGuide) window.sendsongRefreshGuide();
