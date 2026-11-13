@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css">
   <link rel="stylesheet" href="assets/landing.css?v=8">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="assets/i18n.js?v=4"></script>
+  <script src="assets/i18n.js?v=6"></script>
   <script src="assets/site.js?v=13"></script>
 </head>
 <body class="bg-base-100 text-base-content antialiased">
@@ -172,13 +172,13 @@
               <li><strong>Tocca una volta</strong> un brano in PLAYLIST oppure in TUTTI I BRANI. Diventa il brano attivo e parte subito.</li>
               <li><strong>Sul Monitor</strong> compaiono il titolo grande (ORA) e il brano successivo (PROSSIMO). Il contatore in alto sul Master dice quanti leggii sono collegati e riceveranno il prossimo invio.</li>
               <li><strong>Doppio tocco sul Master</strong> apre il PDF di quel brano. Il primo dei due tocchi lo ha già inviato ai Monitor. Dentro il PDF, un altro doppio tocco ingrandisce.</li>
-              <li><strong>La pillola ORA,</strong> accanto alla matita, mostra il brano in scena. Un tocco ti riporta lì se hai scrollato la lista.</li>
+              <li><strong>La pillola ORA,</strong> accanto a Modifica, mostra il brano in scena. Un tocco ti riporta lì se hai scrollato la lista.</li>
             </ol>
             <ol class="steps" data-l="en" lang="en">
               <li><strong>Tap once</strong> on a song in PLAYLIST or in ALL SONGS. It becomes the active song and goes out at once.</li>
               <li><strong>On the Monitor</strong> you see the large title (NOW) and the following song (NEXT). The counter at the top of the Master says how many stands are connected and will receive the next send.</li>
               <li><strong>A double tap on the Master</strong> opens that song’s PDF. The first of the two taps has already sent it to the Monitors. Inside the PDF, another double tap zooms in.</li>
-              <li><strong>The NOW pill,</strong> next to the pencil, shows the song on stage. One tap takes you back there if you have scrolled the list.</li>
+              <li><strong>The NOW pill,</strong> next to Edit, shows the song on stage. One tap takes you back there if you have scrolled the list.</li>
             </ol>
             <div class="guide-shot">
               <figure>
@@ -188,16 +188,16 @@
           </section>
           <section id="scalette" class="guide-section">
             <h2><span data-l="it" lang="it">Playlist</span><span data-l="en" lang="en">Playlists</span></h2>
-            <p data-l="it" lang="it">La PLAYLIST è l’ordine della serata. TUTTI I BRANI è il repertorio intero. Si modifica solo quando la matita è accesa, così un tocco dal vivo non sposta i brani per sbaglio.</p>
-            <p data-l="en" lang="en">PLAYLIST is the order for the night. ALL SONGS is the whole repertoire. You edit only while the pencil is on, so a tap during the show does not move songs by accident.</p>
+            <p data-l="it" lang="it">La PLAYLIST è l’ordine della serata. TUTTI I BRANI è il repertorio intero. Si modifica solo con Modifica acceso, così un tocco dal vivo non sposta i brani per sbaglio. Se la scaletta è vuota, i + sono già sulla lista.</p>
+            <p data-l="en" lang="en">PLAYLIST is the order for the night. ALL SONGS is the whole repertoire. You edit only while Edit is on, so a tap during the show does not move songs by accident. If the playlist is empty, the + buttons are already on the list.</p>
             <ol class="steps" data-l="it" lang="it">
-              <li><strong>Tocca la matita</strong> in alto. Compare la striscia «Stai modificando la playlist» e, accanto ai brani, + e −.</li>
+              <li><strong>Tocca Modifica</strong> in alto. Compare la striscia «Stai modificando la playlist» e, accanto ai brani, + e −.</li>
               <li><strong>Aggiungi</strong> con + in TUTTI I BRANI. <strong>Togli</strong> con −. In PLAYLIST tieni premuto un brano e trascinalo per riordinare.</li>
               <li><strong>Svuota,</strong> accanto a PLAYLIST, toglie tutti i brani. Puoi annullare subito dall’avviso.</li>
               <li><strong>Fine</strong> chiude la modifica: + e − spariscono.</li>
             </ol>
             <ol class="steps" data-l="en" lang="en">
-              <li><strong>Tap the pencil</strong> at the top. The strip «You're editing the playlist» appears and, next to the songs, + and −.</li>
+              <li><strong>Tap Edit</strong> at the top. The strip «You're editing the playlist» appears and, next to the songs, + and −.</li>
               <li><strong>Add</strong> with + under ALL SONGS. <strong>Remove</strong> with −. In PLAYLIST press and hold a song and drag it to reorder.</li>
               <li><strong>Clear,</strong> next to PLAYLIST, removes every song. You can undo at once from the notice.</li>
               <li><strong>Done</strong> closes editing: + and − disappear.</li>
@@ -212,25 +212,29 @@
               <li data-l="en" lang="en"><strong>Share playlist…</strong> sends it to another SendSong device on the same connection. <strong>Export as PDF</strong> makes a file.</li>
               <li data-l="it" lang="it">Le voci che in quel momento non si possono usare restano grigie, con il motivo scritto sotto.</li>
               <li data-l="en" lang="en">Rows you cannot use at that moment stay grey, with the reason written below.</li>
+              <li data-l="it" lang="it"><strong>Crea scaletta…</strong> è nel piano Pro. Indichi la serata e SendSong propone un ordine dai brani che hanno energia e momento. Puoi accettare, togliere o spostare prima di usarla.</li>
+              <li data-l="en" lang="en"><strong>Create setlist…</strong> is on the Pro plan. You describe the night and SendSong proposes an order from songs that have energy and moment. You can accept, remove or move songs before using it.</li>
             </ul>
             <p data-l="it" lang="it">Nella sezione VISTA dello stesso menu, <strong>Solo brani senza PDF</strong> filtra la lista. Una striscia sopra la lista lo ricorda; <strong>Mostra tutti i brani</strong> toglie il filtro. La playlist in uso può riaprirsi al prossimo avvio del Master.</p>
             <p data-l="en" lang="en">In the VIEW section of the same menu, <strong>Songs without PDF only</strong> filters the list. A strip above the list reminds you; <strong>Show all songs</strong> clears the filter. The playlist in use can reopen the next time the Master starts.</p>
           </section>
           <section id="repertorio" class="guide-section">
             <h2><span data-l="it" lang="it">Brani</span><span data-l="en" lang="en">Songs</span></h2>
-            <p data-l="it" lang="it">I brani stanno sul Master, in Impostazioni › Brani. La pagina si chiama «I tuoi brani». Qui imposti titolo, autore e colore: la barra colorata è quella che il Monitor mostra accanto al titolo. Ogni modifica si salva da sola. Non c’è un pulsante Salva.</p>
-            <p data-l="en" lang="en">Songs live on the Master, under Settings › Songs. The page is called «Your songs». Here you set the title, artist and colour: the coloured bar is what the Monitor shows next to the title. Every change is saved on its own. There is no Save button.</p>
+            <p data-l="it" lang="it">I brani stanno sul Master, in Impostazioni › Brani. La pagina si chiama «I tuoi brani». Qui imposti titolo, autore, colore, energia, momento e durata: la barra colorata è quella che il Monitor mostra accanto al titolo. Ogni modifica si salva da sola. Non c’è un pulsante Salva.</p>
+            <p data-l="en" lang="en">Songs live on the Master, under Settings › Songs. The page is called «Your songs». Here you set the title, artist, colour, energy, moment and duration: the coloured bar is what the Monitor shows next to the title. Every change is saved on its own. There is no Save button.</p>
             <ol class="steps" data-l="it" lang="it">
-              <li><strong>Lista vuota:</strong> tocca «Aggiungi il primo brano». La procedura chiede il nome, la cartella dei PDF e la conferma dello spartito.</li>
+              <li><strong>Lista vuota:</strong> tocca «Aggiungi il primo brano». La procedura chiede il nome, la cartella dei PDF e la conferma dello spartito. Sul nome c’è anche «Suggerisci».</li>
               <li><strong>Brani successivi:</strong> tocca «Aggiungi» e scrivi titolo e autore. Se hai già scelto la cartella, SendSong propone lo spartito con la scritta «Consigliato». Puoi cambiarlo, scegliere «Nessun PDF» oppure aprire colore e posizione.</li>
+              <li><strong>Suggerisci</strong> cerca titolo e autore e propone BPM, energia e, se il genere è chiaro, il momento. Serve la rete. Niente si scrive da solo: tocca «Applica». Sotto 80 è lento, da 80 a 110 medio, sopra 110 ballabile. Lo spettacolo funziona anche senza internet.</li>
               <li><strong>Cerca</strong> dal campo in alto: filtra per titolo o autore, senza distinguere maiuscole e accenti. Mentre cerchi, il riordino è in pausa.</li>
               <li><strong>Collega il PDF</strong> toccando l’icona sulla riga e scegliendo il file della cartella. Se non c’è, «Scegli file…» apre l’esplora file (File, iCloud, Dropbox…). SendSong tiene una copia dentro l’app.</li>
               <li><strong>Cartella, se la vuoi:</strong> sotto la ricerca, «Scegli cartella». Dopo la prima volta il pulsante è «Cambia». I PDF di quella cartella si abbinano ai brani per nome del file. Ogni repertorio può avere una cartella diversa. Senza cartella, «Scegli file…» funziona lo stesso.</li>
               <li><strong>Modifica o elimina:</strong> tocca il brano. Nella finestra c’è anche «Elimina brano». Se lo togli per sbaglio, tocca «Annulla» nell’avviso in basso.</li>
             </ol>
             <ol class="steps" data-l="en" lang="en">
-              <li><strong>Empty list:</strong> tap «Add the first song». The setup asks for the name, the PDF folder and confirmation of the chart.</li>
+              <li><strong>Empty list:</strong> tap «Add the first song». The setup asks for the name, the PDF folder and confirmation of the chart. The name step also has «Suggest».</li>
               <li><strong>Later songs:</strong> tap «Add» and type the title and artist. If you already chose a folder, SendSong suggests the chart with the label «Recommended». You can change it, pick «No PDF» or open colour and position.</li>
+              <li><strong>Suggest</strong> looks up the title and artist and proposes BPM, energy and, when the genre is clear, the moment. It needs a network. Nothing is written on its own: tap «Apply». Under 80 is slow, 80 to 110 is medium, above 110 is danceable. The show still works offline.</li>
               <li><strong>Search</strong> from the field at the top: it filters by title or artist, ignoring case and accents. Reordering pauses while you search.</li>
               <li><strong>Link the PDF</strong> by tapping the icon on the row and picking the file from the folder. If it is not there, «Choose file…» opens the file browser (Files, iCloud, Dropbox…). SendSong keeps a copy inside the app.</li>
               <li><strong>A folder, if you want one:</strong> below search, «Choose folder». After the first time the button is «Change». PDFs in that folder match songs by filename. Each repertoire can have a different folder. Without a folder, «Choose file…» still works.</li>
@@ -374,8 +378,8 @@
             <ul>
               <li data-l="it" lang="it"><strong>Gratis.</strong> Sul Master: 1 repertorio, 5 brani attivi, 1 Monitor collegato, Effetti MIDI spenti. Sul Monitor: titoli e scaletta sempre, e fino a 5 PDF.</li>
               <li data-l="en" lang="en"><strong>Free.</strong> On the Master: 1 repertoire, 5 active songs, 1 linked Monitor, MIDI effects off. On the Monitor: titles and setlist always, and up to 5 PDFs.</li>
-              <li data-l="it" lang="it"><strong>PDF Monitor.</strong> Sul dispositivo usato come Monitor: spartiti senza limite, cartella collegata e annotazioni.</li>
-              <li data-l="en" lang="en"><strong>PDF Monitor.</strong> On the device used as Monitor: charts with no cap, a linked folder and annotations.</li>
+              <li data-l="it" lang="it"><strong>PDF Monitor.</strong> Sul dispositivo usato come Monitor: spartiti senza limite e annotazioni.</li>
+              <li data-l="en" lang="en"><strong>PDF Monitor.</strong> On the device used as Monitor: charts with no cap and annotations.</li>
               <li data-l="it" lang="it"><strong>Pro.</strong> Sul Master: brani e Monitor collegati senza limite, più repertori, Effetti MIDI inclusi.</li>
               <li data-l="en" lang="en"><strong>Pro.</strong> On the Master: songs and linked Monitors with no cap, more repertoires, MIDI effects included.</li>
               <li data-l="it" lang="it"><strong>Full.</strong> Pro sul Master e PDF Monitor insieme. «Full per sempre» è lo stesso sblocco, pagato una volta, senza abbonamento e senza rinnovi.</li>

@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css">
   <link rel="stylesheet" href="assets/landing.css?v=8">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="assets/i18n.js?v=4"></script>
+  <script src="assets/i18n.js?v=6"></script>
   <script src="assets/site.js?v=13"></script>
 </head>
 <body class="bg-base-100 text-base-content antialiased">
@@ -65,8 +65,8 @@
         <p data-l="it" lang="it">Questa informativa spiega come l'app <strong>SendSong</strong> tratta i dati personali, ai sensi del Regolamento (UE) 2016/679 (GDPR).</p>
         <p data-l="en" lang="en">This notice explains how the <strong>SendSong</strong> app handles personal data, in accordance with Regulation (EU) 2016/679 (GDPR).</p>
         <div class="summary">
-          <p data-l="it" lang="it"><strong>In breve:</strong> nessun account, nessuna pubblicità, nessun tracciamento. Brani, playlist, PDF, codici di abbinamento e backup restano sul tuo dispositivo. Master e Monitor si scambiano i brani direttamente in rete locale o Bluetooth, senza passare da server nostri.</p>
-          <p data-l="en" lang="en"><strong>In short:</strong> no account, no advertising, no tracking. Your library, setlists, PDFs, pairing codes and backups stay on your device. Master and Monitors exchange songs directly over the local network or Bluetooth, without going through our servers.</p>
+          <p data-l="it" lang="it"><strong>In breve:</strong> nessun account, nessuna pubblicità, nessun tracciamento. Brani, playlist, PDF, codici di abbinamento e backup restano sul tuo dispositivo. Master e Monitor si scambiano i brani direttamente in rete locale o Bluetooth, senza passare da server nostri. Se tocchi Suggerisci, titolo e autore partono verso Deezer e Apple per proporre BPM e genere: non li salviamo noi.</p>
+          <p data-l="en" lang="en"><strong>In short:</strong> no account, no advertising, no tracking. Your library, setlists, PDFs, pairing codes and backups stay on your device. Master and Monitors exchange songs directly over the local network or Bluetooth, without going through our servers. If you tap Suggest, the title and artist go to Deezer and Apple to propose BPM and genre: we do not store them.</p>
         </div>
         <nav class="toc" aria-label="Indice">
           <strong><span data-l="it" lang="it">Indice</span><span data-l="en" lang="en">Contents</span></strong>
@@ -99,8 +99,10 @@
           <p data-l="it" lang="it">SendSong non richiede account né registrazione. Non contiene pubblicità, non usa SDK di analisi o pubblicitaria e non traccia l'uso dell'app.</p>
           <p data-l="en" lang="en">SendSong does not require an account or registration. It contains no advertising, uses no analytics or advertising SDKs, and does not track how you use the app.</p>
           <ul>
-            <li data-l="it" lang="it"><strong>Repertorio e scalette</strong> (titoli, autori, colori, ordine): salvati solo sul dispositivo Master.</li>
-            <li data-l="en" lang="en"><strong>Library and setlists</strong> (titles, artists, colours, order): stored only on the Master device.</li>
+            <li data-l="it" lang="it"><strong>Repertorio e scalette</strong> (titoli, autori, colori, ordine, energia, momento, BPM): salvati solo sul dispositivo Master.</li>
+            <li data-l="en" lang="en"><strong>Library and setlists</strong> (titles, artists, colours, order, energy, moment, BPM): stored only on the Master device.</li>
+            <li data-l="it" lang="it"><strong>Suggerisci</strong>: solo se tocchi il pulsante, titolo e autore del brano vengono inviati a Deezer (BPM) e ad Apple (genere). La risposta resta sul dispositivo. RitmoDigitale non riceve né conserva quella ricerca.</li>
+            <li data-l="en" lang="en"><strong>Suggest</strong>: only if you tap the button, the song title and artist are sent to Deezer (BPM) and Apple (genre). The reply stays on the device. RitmoDigitale does not receive or store that lookup.</li>
             <li data-l="it" lang="it"><strong>Spartiti PDF</strong> importati sul Monitor: file e indice locale sul dispositivo Monitor.</li>
             <li data-l="en" lang="en"><strong>PDF charts</strong> imported on the Monitor: files and local index on the Monitor device.</li>
             <li data-l="it" lang="it"><strong>Impostazioni</strong> (ruolo, tema, trasporto, PIN Master, preferenze PDF): sul dispositivo.</li>

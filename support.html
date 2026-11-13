@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css">
   <link rel="stylesheet" href="assets/landing.css?v=8">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="assets/i18n.js?v=4"></script>
+  <script src="assets/i18n.js?v=6"></script>
   <script src="assets/site.js?v=13"></script>
 </head>
 <body class="bg-base-100 text-base-content antialiased">
@@ -202,6 +202,15 @@
             </div>
           </details>
           <details>
+            <summary><span data-l="it" lang="it">A cosa serve Suggerisci?</span><span data-l="en" lang="en">What is Suggest for?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Quando aggiungi o modifichi un brano, «Suggerisci» cerca titolo e autore e propone BPM, energia e, se il genere è chiaro, il momento della serata. Sotto 80 è lento, da 80 a 110 medio, sopra 110 ballabile. Tocca «Applica» per scriverli: niente cambia da solo.</p>
+              <p data-l="it" lang="it">Serve la rete solo per quella ricerca. Titolo e autore vanno a Deezer e Apple; non li salviamo noi. Se non c’è rete o il brano non si trova, i campi restano come sono. Lo spettacolo, i Monitor e gli spartiti funzionano senza internet.</p>
+              <p data-l="en" lang="en">When you add or edit a song, «Suggest» looks up the title and artist and proposes BPM, energy and, when the genre is clear, the moment in the set. Under 80 is slow, 80 to 110 is medium, above 110 is danceable. Tap «Apply» to write them: nothing changes on its own.</p>
+              <p data-l="en" lang="en">Only that lookup needs a network. The title and artist go to Deezer and Apple; we do not store them. If there is no network or the song is not found, the fields stay as they are. The show, the Monitors and the charts work without the internet.</p>
+            </div>
+          </details>
+          <details>
             <summary><span data-l="it" lang="it">Il PDF del brano non è nella lista</span><span data-l="en" lang="en">The song’s PDF is not in the list</span></summary>
             <div class="ans">
               <p data-l="it" lang="it">Nella scelta del PDF, se il file non è tra quelli della cartella, tocca «Scegli file…». Si apre l’esplora file del telefono: File, iCloud, Dropbox e le altre app che condividono documenti. SendSong tiene una copia del PDF dentro l’app, così lo spartito resta disponibile anche se sposti l’originale.</p>
@@ -222,10 +231,19 @@
           <details>
             <summary><span data-l="it" lang="it">Come modifico la playlist della serata?</span><span data-l="en" lang="en">How do I edit the night’s playlist?</span></summary>
             <div class="ans">
-              <p data-l="it" lang="it">Sulla home del Master, la matita in alto apre la striscia «Stai modificando la playlist». + accanto a un brano lo aggiunge, − lo toglie, il trascinamento riordina l’elenco PLAYLIST.</p>
-              <p data-l="it" lang="it">«Svuota», accanto a PLAYLIST, toglie tutti i brani: puoi annullare subito dall’avviso. «Fine» chiude la modifica: + e − spariscono e i brani non si spostano più per sbaglio. La pillola accanto alla matita è il brano in scena (ORA) e con un tocco ti riporta lì.</p>
-              <p data-l="en" lang="en">On the Master’s home, the pencil at the top opens the «You're editing the playlist» strip. + next to a song adds it, − removes it, and dragging reorders the PLAYLIST.</p>
-              <p data-l="en" lang="en">«Clear», next to PLAYLIST, removes every song: you can undo at once from the notice. «Done» closes editing: + and − disappear and songs no longer move by accident. The pill next to the pencil is the song on stage (NOW) and one tap takes you back there.</p>
+              <p data-l="it" lang="it">Sulla home del Master, Modifica in alto apre la striscia «Stai modificando la playlist». + accanto a un brano lo aggiunge, − lo toglie, il trascinamento riordina l’elenco PLAYLIST. Se la scaletta è vuota, i + sono già sulla lista e «Aggiungi brano» porta a TUTTI I BRANI.</p>
+              <p data-l="it" lang="it">«Svuota», accanto a PLAYLIST, toglie tutti i brani: puoi annullare subito dall’avviso. «Fine» chiude la modifica: + e − spariscono e i brani non si spostano più per sbaglio. La pillola accanto a Modifica è il brano in scena (ORA) e con un tocco ti riporta lì.</p>
+              <p data-l="en" lang="en">On the Master’s home, Edit at the top opens the «You're editing the playlist» strip. + next to a song adds it, − removes it, and dragging reorders the PLAYLIST. If the playlist is empty, the + buttons are already on the list and «Add song» jumps to ALL SONGS.</p>
+              <p data-l="en" lang="en">«Clear», next to PLAYLIST, removes every song: you can undo at once from the notice. «Done» closes editing: + and − disappear and songs no longer move by accident. The pill next to Edit is the song on stage (NOW) and one tap takes you back there.</p>
+            </div>
+          </details>
+          <details>
+            <summary><span data-l="it" lang="it">Come funziona Crea scaletta?</span><span data-l="en" lang="en">How does Create setlist work?</span></summary>
+            <div class="ans">
+              <p data-l="it" lang="it">Dal menu (⋮) sul Master, «Crea scaletta…» è nel piano Pro. Indichi la serata e SendSong propone un ordine dai brani che hanno energia e momento. Puoi accettare, togliere o spostare prima di usarla.</p>
+              <p data-l="it" lang="it">I suggerimenti sono migliori se i brani hanno energia e momento. Sul brano, «Suggerisci» li propone dal titolo e dall’autore.</p>
+              <p data-l="en" lang="en">From the menu (⋮) on the Master, «Create setlist…» is on the Pro plan. You describe the night and SendSong proposes an order from songs that have energy and moment. You can accept, remove or move songs before using it.</p>
+              <p data-l="en" lang="en">Suggestions are better when songs have energy and moment. On the song, «Suggest» fills them from the title and artist.</p>
             </div>
           </details>
           <details>
@@ -418,8 +436,8 @@
               <ul>
                 <li data-l="it" lang="it"><strong>Gratis</strong>: sul Master, 5 brani attivi, 1 repertorio e 1 Monitor collegato. Effetti MIDI spenti. Sul Monitor, titoli e scaletta sempre, e fino a 5 PDF.</li>
                 <li data-l="en" lang="en"><strong>Free</strong>: on the Master, 5 active songs, 1 repertoire and 1 linked Monitor. MIDI effects off. On the Monitor, titles and setlist always, and up to 5 PDFs.</li>
-                <li data-l="it" lang="it"><strong>PDF Monitor</strong>: sul dispositivo Monitor, spartiti senza limite, cartella collegata e annotazioni.</li>
-                <li data-l="en" lang="en"><strong>PDF Monitor</strong>: on the Monitor device, charts with no cap, a linked folder and annotations.</li>
+                <li data-l="it" lang="it"><strong>PDF Monitor</strong>: sul dispositivo Monitor, spartiti senza limite e annotazioni.</li>
+                <li data-l="en" lang="en"><strong>PDF Monitor</strong>: on the Monitor device, charts with no cap and annotations.</li>
                 <li data-l="it" lang="it"><strong>Pro</strong>: sul Master, brani e Monitor collegati senza limite, più repertori, Effetti MIDI inclusi.</li>
                 <li data-l="en" lang="en"><strong>Pro</strong>: on the Master, songs and linked Monitors with no cap, more repertoires, MIDI effects included.</li>
                 <li data-l="it" lang="it"><strong>Full</strong>: Pro sul Master e PDF Monitor insieme. «Full per sempre» è lo stesso sblocco, senza abbonamento e senza rinnovi.</li>
