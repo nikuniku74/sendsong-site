@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css">
   <link rel="stylesheet" href="assets/landing.css?v=8">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="assets/i18n.js?v=6"></script>
+  <script src="assets/i18n.js?v=7"></script>
   <script src="assets/site.js?v=13"></script>
 </head>
 <body class="bg-base-100 text-base-content antialiased">
@@ -225,7 +225,7 @@
             <ol class="steps" data-l="it" lang="it">
               <li><strong>Lista vuota:</strong> tocca «Aggiungi il primo brano». La procedura chiede il nome, la cartella dei PDF e la conferma dello spartito. Sul nome c’è anche «Suggerisci».</li>
               <li><strong>Brani successivi:</strong> tocca «Aggiungi» e scrivi titolo e autore. Se hai già scelto la cartella, SendSong propone lo spartito con la scritta «Consigliato». Puoi cambiarlo, scegliere «Nessun PDF» oppure aprire colore e posizione.</li>
-              <li><strong>Suggerisci</strong> cerca titolo e autore e propone BPM, energia e, se il genere è chiaro, il momento. Serve la rete. Niente si scrive da solo: tocca «Applica». Sotto 80 è lento, da 80 a 110 medio, sopra 110 ballabile. Da 140 in su, per pop, ballate e generi lenti, il tempo è contato al doppio: vale la metà (Angels: 150 diventa 75, lento). Dance, rock e rap restano al numero intero. Lo spettacolo funziona anche senza internet.</li>
+              <li><strong>Suggerisci</strong> cerca titolo e autore e propone BPM, energia, anno, genere, tonalità (da GetSongBPM quando c’è, poi modificabile a mano), avviso se il testo è esplicito e la durata originale. Puoi ascoltare 30 secondi da Apple solo se tocchi Ascolta. Serve la rete solo per quella ricerca e per l’anteprima. Niente si scrive da solo: tocca «Applica». Sotto 80 è lento, da 80 a 110 medio, sopra 110 ballabile. Da 140 in su, per pop, ballate e generi lenti, il tempo è contato al doppio: vale la metà (Angels: 150 diventa 75, lento). Dance, rock e rap restano al numero intero. Lo spettacolo funziona anche senza internet.</li>
               <li><strong>Cerca</strong> dal campo in alto: filtra per titolo o autore, senza distinguere maiuscole e accenti. Mentre cerchi, il riordino è in pausa.</li>
               <li><strong>Collega il PDF</strong> toccando l’icona sulla riga e scegliendo il file della cartella. Se non c’è, «Scegli file…» apre l’esplora file (File, iCloud, Dropbox…). SendSong tiene una copia dentro l’app.</li>
               <li><strong>Cartella, se la vuoi:</strong> sotto la ricerca, «Scegli cartella». Dopo la prima volta il pulsante è «Cambia». I PDF di quella cartella si abbinano ai brani per nome del file. Ogni repertorio può avere una cartella diversa. Senza cartella, «Scegli file…» funziona lo stesso.</li>
@@ -234,7 +234,7 @@
             <ol class="steps" data-l="en" lang="en">
               <li><strong>Empty list:</strong> tap «Add the first song». The setup asks for the name, the PDF folder and confirmation of the chart. The name step also has «Suggest».</li>
               <li><strong>Later songs:</strong> tap «Add» and type the title and artist. If you already chose a folder, SendSong suggests the chart with the label «Recommended». You can change it, pick «No PDF» or open colour and position.</li>
-              <li><strong>Suggest</strong> looks up the title and artist and proposes BPM, energy and, when the genre is clear, the moment. It needs a network. Nothing is written on its own: tap «Apply». Under 80 is slow, 80 to 110 is medium, above 110 is danceable. From 140 up, for pop, ballads and slower genres, the tempo is counted double: the half is used (Angels: 150 becomes 75, slow). Dance, rock and rap keep the full number. The show still works offline.</li>
+              <li><strong>Suggest</strong> looks up the title and artist and proposes BPM, energy, year, genre, key (from GetSongBPM when available, then editable by hand), a warning if lyrics are explicit and the original length. You can play 30 seconds from Apple only if you tap Play. The network is only for that lookup and the preview. Nothing is written on its own: tap «Apply». Under 80 is slow, 80 to 110 is medium, above 110 is danceable. From 140 up, for pop, ballads and slower genres, the tempo is counted double: the half is used (Angels: 150 becomes 75, slow). Dance, rock and rap keep the full number. The show still works offline.</li>
               <li><strong>Search</strong> from the field at the top: it filters by title or artist, ignoring case and accents. Reordering pauses while you search.</li>
               <li><strong>Link the PDF</strong> by tapping the icon on the row and picking the file from the folder. If it is not there, «Choose file…» opens the file browser (Files, iCloud, Dropbox…). SendSong keeps a copy inside the app.</li>
               <li><strong>A folder, if you want one:</strong> below search, «Choose folder». After the first time the button is «Change». PDFs in that folder match songs by filename. Each repertoire can have a different folder. Without a folder, «Choose file…» still works.</li>
