@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daisyui@5" type="text/css">
   <link rel="stylesheet" href="assets/landing.css?v=8">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <script src="assets/i18n.js?v=9"></script>
+  <script src="assets/i18n.js?v=10"></script>
   <script src="assets/site.js?v=13"></script>
 </head>
 <body class="bg-base-100 text-base-content antialiased">
@@ -204,9 +204,11 @@
           <details>
             <summary><span data-l="it" lang="it">Come cerco un brano mentre scrivo?</span><span data-l="en" lang="en">How do I search while typing a song?</span></summary>
             <div class="ans">
-              <p data-l="it" lang="it">Quando aggiungi o modifichi un brano, scrivi nel campo titolo: con la rete, dopo tre lettere compaiono risultati da Deezer. Scegli una riga e SendSong compila BPM, energia, anno, genere, tonalità, avviso se il testo è esplicito e, se il genere è chiaro, il momento. Puoi ascoltare 30 secondi solo se tocchi Ascolta. BPM e tonalità sono stimati: se il BPM sembra il doppio tocca ½ sulla scheda riepilogo. Sotto 80 è lento, da 80 a 110 medio, sopra 110 ballabile.</p>
+              <p data-l="it" lang="it">Quando aggiungi o modifichi un brano, tocca Suggerisci in alto a destra nel popup, oppure scegli un risultato mentre scrivi il titolo. Serve la rete. SendSong compila solo dati di catalogo: BPM stimato, energia, anno, genere, tonalità della registrazione originale e avviso se il testo è esplicito. Sotto 80 è lento, da 80 a 110 medio, sopra 110 ballabile. Se il BPM sembra il doppio, tocca ½. Ascolta suona 30 secondi, Ferma interrompe.</p>
+              <p data-l="it" lang="it">Il momento arriva solo se il genere è da ballo (dance, elettronica, disco…) o da ascolto (jazz, classica, blues…). Pop, rock e gli altri generi non ricevono un momento: Apertura, Ascolto e cena, Ballo e Chiusura li scegli in Dettagli. Senza quel dato, Crea scaletta non sa dove mettere il brano nella serata.</p>
               <p data-l="it" lang="it">Serve la rete solo per la ricerca e l’anteprima. La digitazione va a Deezer; titolo e autore scelti vanno ad Apple; a ReccoBeats solo il codice ISRC del brano. Non li salviamo noi. Senza rete puoi usare «come titolo» e scrivere a mano. Lo spettacolo funziona senza internet.</p>
-              <p data-l="en" lang="en">When you add or edit a song, type in the title field: with a network, after three characters Deezer results appear. Pick a row and SendSong fills BPM, energy, year, genre, key, an explicit warning and, when the genre is clear, the moment. You can play 30 seconds only if you tap Listen. BPM and key are estimates: if the BPM looks doubled, tap ½ on the summary card. Under 80 is slow, 80 to 110 is medium, above 110 is danceable.</p>
+              <p data-l="en" lang="en">When you add or edit a song, tap Suggest at the top right of the popup, or pick a result while you type the title. It needs a network. SendSong fills in only catalog data: estimated BPM, energy, year, genre, the key of the original recording and an explicit warning. Under 80 is slow, 80 to 110 is medium, above 110 is danceable. If the BPM looks doubled, tap ½. Listen plays 30 seconds, Stop interrupts it.</p>
+              <p data-l="en" lang="en">A moment is filled in only when the genre is for dancing (dance, electronic, disco…) or for listening (jazz, classical, blues…). Pop, rock and other genres get no moment: choose Opening, Listening and dinner, Dancing and Closing in Details. Without that, Create setlist does not know where the song belongs in the night.</p>
               <p data-l="en" lang="en">Only search and preview need a network. What you type goes to Deezer; the title and artist you pick go to Apple; only the song's ISRC goes to ReccoBeats. We do not store them. Offline you can keep manual entry. The show works without the internet.</p>
             </div>
           </details>
@@ -247,10 +249,10 @@
           <details>
             <summary><span data-l="it" lang="it">Come funziona Crea scaletta?</span><span data-l="en" lang="en">How does Create setlist work?</span></summary>
             <div class="ans">
-              <p data-l="it" lang="it">Dal menu (⋮) sul Master, «Crea scaletta…» è nel piano Pro. Indichi la serata e SendSong propone un ordine dai brani che hanno energia e momento. Puoi accettare, togliere o spostare prima di usarla.</p>
-              <p data-l="it" lang="it">I suggerimenti sono migliori se i brani hanno energia e momento. Cercali mentre scrivi il titolo.</p>
-              <p data-l="en" lang="en">From the menu (⋮) on the Master, «Create setlist…» is on the Pro plan. You describe the night and SendSong proposes an order from songs that have energy and moment. You can accept, remove or move songs before using it.</p>
-              <p data-l="en" lang="en">Suggestions are better when songs have energy and moment. Search while typing the title.</p>
+              <p data-l="it" lang="it">Dal menu (⋮) sul Master, «Crea scaletta…» è nel piano Pro. Scegli il tipo di serata e la durata. L’ordine usa solo i brani del repertorio e i dati che ci hai messo: energia, momento e durata. Senza durata un brano conta 4 minuti. Se non indichi la lunghezza, la proposta punta a 60 minuti e si ferma quando i brani finiscono: non ne inventa.</p>
+              <p data-l="it" lang="it">Matrimonio, locale, piano bar, festa e concerto seguono energia e momento. Apertura e Chiusura le mette la serata, non il catalogo. La prova ignora energia e momento e mette prima i brani suonati di meno. Se nessun brano ha energia o momento, l’ordine non segue la serata. Puoi togliere, spostare o cambiare un brano prima di usarla.</p>
+              <p data-l="en" lang="en">From the menu (⋮) on the Master, «Create setlist…» is on the Pro plan. Choose the kind of night and the length. The order uses only songs in the repertoire and the data you entered: energy, moment and duration. A song with no duration counts as 4 minutes. If you do not set a length, the proposal aims for 60 minutes and stops when the songs run out: it does not invent any.</p>
+              <p data-l="en" lang="en">Wedding, venue, piano bar, party and concert follow energy and moment. Opening and Closing come from the night, not the catalog. Rehearsal ignores energy and moment and puts the least-played songs first. If no song has energy or moment, the order does not follow the night. You can remove, move or change a song before using it.</p>
             </div>
           </details>
           <details>
